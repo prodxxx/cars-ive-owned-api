@@ -1,0 +1,185 @@
+const cars = [{
+  id: 1,
+  manufacturer: 'Fiat',
+  model: 'Spider',
+  year: '1976',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 2,
+  manufacturer: 'Plymouth',
+  model: 'Valiant',
+  year: '1973',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 3,
+  manufacturer: 'Nissan',
+  model: 'Pulsar',
+  year: '1984',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 4,
+  manufacturer: 'Suzuki',
+  model: 'Samarai',
+  year: '1985',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 5,
+  manufacturer: 'Fiat',
+  model: 'X1/9',
+  year: '1981',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 6,
+  manufacturer: 'Chevrolet',
+  model: 'Caprice',
+  year: '1980',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 7,
+  manufacturer: 'Alfa Romeo',
+  model: 'Spider',
+  year: '1973',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 8,
+  manufacturer: 'Jeep',
+  model: 'Cherokee',
+  year: '1986',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 9,
+  manufacturer: 'Ford',
+  model: 'Explorer',
+  year: '1989',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 10,
+  manufacturer: 'Cadillac',
+  model: 'Catera',
+  year: '1991',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 11,
+  manufacturer: 'Ford',
+  model: 'Expedition',
+  year: '2003',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 12,
+  manufacturer: 'Mazda',
+  model: '5',
+  year: '2013',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 13,
+  manufacturer: 'Dodge',
+  model: 'Grand Caravan',
+  year: '2008',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 14,
+  manufacturer: 'Audi',
+  model: 'A4',
+  year: '2005',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 15,
+  manufacturer: 'Saab',
+  model: '3-0',
+  year: '2005',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 16,
+  manufacturer: 'Ford',
+  model: 'Flex',
+  year: '2009',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 17,
+  manufacturer: 'Lexus',
+  model: 'RX300',
+  year: '1996',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 18,
+  manufacturer: 'Mercedes',
+  model: 'E300',
+  year: '2003',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 19,
+  manufacturer: 'Volkswaggen',
+  model: 'Routan',
+  year: '2011',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 20,
+  manufacturer: 'BMW',
+  model: '320i',
+  year: '1996',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 21,
+  manufacturer: 'Jeep',
+  model: 'Warngler',
+  year: '1985',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 22,
+  manufacturer: 'Cadillac',
+  model: 'Escalade',
+  year: '2007',
+  currentVehicle: 'no',
+  repurchase: 'yes'
+}, {
+  id: 23,
+  manufacturer: 'Nissan',
+  model: 'Pathfinder',
+  year: '2007',
+  currentVehicle: 'yes',
+  repurchase: 'no'
+}, {
+  id: 24,
+  manufacturer: 'Mitsubishi',
+  model: 'Outlander Sport',
+  year: '2015',
+  currentVehicle: 'yes',
+  repurchase: 'no'
+}, {
+  id: 25,
+  manufacturer: 'Mitsubishi',
+  model: 'Spider',
+  year: '1994',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}, {
+  id: 26,
+  manufacturer: 'Honda',
+  model: 'Prelude',
+  year: '1984',
+  currentVehicle: 'no',
+  repurchase: 'no'
+}]
+
+module.exports = cars

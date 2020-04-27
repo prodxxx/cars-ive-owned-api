@@ -1,0 +1,62 @@
+html
+  head
+  link(rel="stylesheet" href="/public/styles.css")
+  include partials/head
+  body  
+      h3 This is a list of cars I have owned. (yes, i've owned enough cars to warrant a list)  
+        br 
+      h3  Currently the list will hold just the following information:
+      p 
+        ul
+          li id
+          li Make
+          li Model
+          li Year
+          li If it is a currently owned vehicle
+          li If I would repurchase this vehicle
+
+      h3 At a later time I will add manufacturer's model lists and a data about my future hopeful purchases.
+
+      h2 Using the API
+
+      h4 Getting All Previous Owned Cars
+      p
+        ul
+          li GET http:\\localhost:1337\cars
+
+      h4 Getting A List of Cars By Manufacturer
+      p
+        ul
+          li GET http:\\localhost:1337\manufacturer\"manufacturer"
+
+      h4 Getting A Car by Model
+      p
+        ul
+          li GET http:\\localhost:1337\model\"model - without spaces"
+
+      h4 Getting A List of Cars Currently Owned
+      p
+        ul
+          li  GET https:\\localhost:1337\currentlyowned
+
+      h4 Getting A List of Cars I Would Buy Again
+      p
+        ul
+          li GET http:\\localhost:1337\repurchase
+
+      h4 Getting A List of Car Models I Have Not Owned
+      p
+        ul
+          li GET http:\\localhost:1337\neverOwned
+
+      h4 Deleting A Car I Have Owned 
+      p
+        ul
+          li GET http:\\localhost:1337\delete\"id"
+
+      h4 Adding A Vehicle To The List
+      p
+        ul
+          li POST http:\\localhost:1337 { "manufacturer": "manufacturer name", "model": "model name", "year": "year manufcatured", "currentVehicle": "yes or no", "repurchase": "yes or no" }
+
+      

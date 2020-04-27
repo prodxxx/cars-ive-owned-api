@@ -27,12 +27,12 @@ html
       h4 Getting A List of Cars By Manufacturer
       p
         ul
-          li GET http:\\localhost:1337\"manufacturer"
+          li GET http:\\localhost:1337\manufacturer\"manufacturer"
 
       h4 Getting A Car by Model
       p
         ul
-          li GET http:\\localhost:1337\"model - without spaces"
+          li GET http:\\localhost:1337\model\"model - without spaces"
 
       h4 Getting A List of Cars Currently Owned
       p
@@ -43,6 +43,16 @@ html
       p
         ul
           li GET http:\\localhost:1337\repurchase
+
+      h4 Getting A List of Car Models I Have Not Owned
+      p
+        ul
+          li GET http:\\localhost:1337\neverOwned
+
+      h4 Deleting A Car I Have Owned 
+      p
+        ul
+          li GET http:\\localhost:1337\delete\"id"
 
       h4 Adding A Vehicle To The List
       p

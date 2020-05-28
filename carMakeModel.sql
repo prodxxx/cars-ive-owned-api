@@ -1,2290 +1,1145 @@
+CREATE DATABASE carsIveOwned;
 
-SET IDENTITY_INSERT CarMakes ON;
-INSERT INTO CarMakes
-  (Id, Name)
-VALUES
-  (1, 'Abarth'),
-  (2, 'AC'),
-  (3, 'Acura'),
-  (4, 'Aixam'),
-  (5, 'Alfa Romeo'),
-  (6, 'ALPINA'),
-  (7, 'Artega'),
-  (8, 'Asia Motors'),
-  (9, 'Aston Martin'),
-  (10, 'Audi'),
-  (11, 'Austin'),
-  (12, 'Austin Healey'),
-  (13, 'Bentley'),
-  (14, 'BMW'),
-  (15, 'Borgward'),
-  (16, 'Brilliance'),
-  (17, 'Bugatti'),
-  (18, 'Buick'),
-  (19, 'Cadillac'),
-  (20, 'Casalini'),
-  (21, 'Caterham'),
-  (22, 'Chatenet'),
-  (23, 'Chevrolet'),
-  (24, 'Chrysler'),
-  (25, 'Citroën'),
-  (26, 'Cobra'),
-  (27, 'Corvette'),
-  (28, 'Cupra'),
-  (29, 'Dacia'),
-  (30, 'Daewoo'),
-  (31, 'Daihatsu'),
-  (32, 'DeTomaso'),
-  (33, 'Dodge'),
-  (34, 'Donkervoort'),
-  (35, 'DS Automobiles'),
-  (36, 'Ferrari'),
-  (37, 'Fiat'),
-  (38, 'Fisker'),
-  (39, 'Ford'),
-  (40, 'GAC Gonow'),
-  (41, 'Gemballa'),
-  (42, 'GMC'),
-  (43, 'Grecav'),
-  (44, 'Hamann'),
-  (45, 'Holden'),
-  (46, 'Honda'),
-  (47, 'Hummer'),
-  (48, 'Hyundai'),
-  (49, 'Infiniti'),
-  (50, 'Isuzu'),
-  (51, 'Iveco'),
-  (52, 'Jaguar'),
-  (53, 'Jeep'),
-  (54, 'Kia'),
-  (55, 'Koenigsegg'),
-  (56, 'KTM'),
-  (57, 'Lada'),
-  (58, 'Lamborghini'),
-  (59, 'Lancia'),
-  (60, 'Land Rover'),
-  (61, 'Landwind'),
-  (62, 'Lexus'),
-  (63, 'Ligier'),
-  (64, 'Lincoln'),
-  (65, 'Lotus'),
-  (66, 'Mahindra'),
-  (67, 'Maserati'),
-  (68, 'Maybach'),
-  (69, 'Mazda'),
-  (70, 'McLaren'),
-  (71, 'Mercedes-Benz'),
-  (72, 'MG'),
-  (73, 'Microcar'),
-  (74, 'MINI'),
-  (75, 'Mitsubishi'),
-  (76, 'Morgan'),
-  (77, 'Nissan'),
-  (78, 'NSU'),
-  (79, 'Oldsmobile'),
-  (80, 'Opel'),
-  (81, 'Pagani'),
-  (82, 'Peugeot'),
-  (83, 'Piaggio'),
-  (84, 'Plymouth'),
-  (85, 'Polestar'),
-  (86, 'Pontiac'),
-  (87, 'Porsche'),
-  (88, 'Proton'),
-  (89, 'Renault'),
-  (90, 'Rolls-Royce'),
-  (91, 'Rover'),
-  (92, 'Ruf'),
-  (93, 'Saab'),
-  (94, 'Santana'),
-  (95, 'Seat'),
-  (96, 'Skoda'),
-  (97, 'Smart'),
-  (98, 'speedART'),
-  (99, 'Spyker'),
-  (100, 'Ssangyong'),
-  (101, 'Subaru'),
-  (102, 'Suzuki'),
-  (103, 'Talbot'),
-  (104, 'Tata'),
-  (105, 'TECHART'),
-  (106, 'Tesla'),
-  (107, 'Toyota'),
-  (108, 'Trabant'),
-  (109, 'Triumph'),
-  (110, 'TVR'),
-  (111, 'Volkswagen'),
-  (112, 'Volvo'),
-  (113, 'Wartburg'),
-  (114, 'Westfield'),
-  (115, 'Wiesmann'),
-  (116, 'Other');
-SET IDENTITY_INSERT CarMakes OFF;
-SET IDENTITY_INSERT CarModels ON;
-INSERT INTO CarModels
-  (Id, MakeId, Name, Series)
-VALUES
-  (1, 1, '124 Spider', NULL),
-  (2, 1, '500', NULL),
-  (3, 1, '500C', NULL),
-  (4, 1, '595', NULL),
-  (5, 1, '595C', NULL),
-  (6, 1, '595 Competizione', NULL),
-  (7, 1, '595 Turismo', NULL),
-  (8, 1, '695', NULL),
-  (9, 1, '695C', NULL),
-  (10, 1, 'Grande Punto', NULL),
-  (11, 1, 'Punto Evo', NULL),
-  (12, 1, 'Other', NULL),
-  (13, 2, 'Other', NULL),
-  (14, 3, 'MDX', NULL),
-  (15, 3, 'NSX', NULL),
-  (16, 3, 'RL', NULL),
-  (17, 3, 'RSX', NULL),
-  (18, 3, 'TL', NULL),
-  (19, 3, 'TSX', NULL),
-  (20, 3, 'Other', NULL),
-  (21, 4, 'City', NULL),
-  (22, 4, 'Crossline', NULL),
-  (23, 4, 'Roadline', NULL),
-  (24, 4, 'Scouty R', NULL),
-  (25, 4, 'Other', NULL),
-  (26, 5, '4C', NULL),
-  (27, 5, '8C', NULL),
-  (28, 5, 'Alfa 145', NULL),
-  (29, 5, 'Alfa 146', NULL),
-  (30, 5, 'Alfa 147', NULL),
-  (31, 5, 'Alfa 155', NULL),
-  (32, 5, 'Alfa 156', NULL),
-  (33, 5, 'Alfa 159', NULL),
-  (34, 5, 'Alfa 164', NULL),
-  (35, 5, 'Alfa 166', NULL),
-  (36, 5, 'Alfa 33', NULL),
-  (37, 5, 'Alfa 75', NULL),
-  (38, 5, 'Alfa 90', NULL),
-  (39, 5, 'Alfasud', NULL),
-  (40, 5, 'Alfetta', NULL),
-  (41, 5, 'Brera', NULL),
-  (42, 5, 'Crosswagon', NULL),
-  (43, 5, 'Giulia', NULL),
-  (44, 5, 'Giulietta', NULL),
-  (45, 5, 'GT', NULL),
-  (46, 5, 'GTV', NULL),
-  (47, 5, 'Junior', NULL),
-  (48, 5, 'MiTo', NULL),
-  (49, 5, 'Spider', NULL),
-  (50, 5, 'Sprint', NULL),
-  (51, 5, 'Stelvio', NULL),
-  (52, 5, 'Other', NULL),
-  (53, 6, 'B10', NULL),
-  (54, 6, 'B12', NULL),
-  (55, 6, 'B3', NULL),
-  (56, 6, 'B4', NULL),
-  (57, 6, 'B5', NULL),
-  (58, 6, 'B6', NULL),
-  (59, 6, 'B7', NULL),
-  (60, 6, 'B8', NULL),
-  (61, 6, 'D10', NULL),
-  (62, 6, 'D3', NULL),
-  (63, 6, 'D4', NULL),
-  (64, 6, 'D5', NULL),
-  (65, 6, 'Roadster S', NULL),
-  (66, 6, 'XD3', NULL),
-  (67, 6, 'XD4', NULL),
-  (68, 6, 'Other', NULL),
-  (69, 7, 'GT', NULL),
-  (70, 7, 'Other', NULL),
-  (71, 8, 'Rocsta', NULL),
-  (72, 8, 'Other', NULL),
-  (73, 9, 'AR1', NULL),
-  (74, 9, 'Cygnet', NULL),
-  (75, 9, 'DB', NULL),
-  (76, 9, 'DB11', NULL),
-  (77, 9, 'DB7', NULL),
-  (78, 9, 'DB9', NULL),
-  (79, 9, 'DBS', NULL),
-  (80, 9, 'Lagonda', NULL),
-  (81, 9, 'Rapide', NULL),
-  (82, 9, 'V12 Vantage', NULL),
-  (83, 9, 'V8 Vantage', NULL),
-  (84, 9, 'Vanquish', NULL),
-  (85, 9, 'Virage', NULL),
-  (86, 9, 'Other', NULL),
-  (87, 10, '100', NULL),
-  (88, 10, '200', NULL),
-  (89, 10, '80', NULL),
-  (90, 10, '90', NULL),
-  (91, 10, 'A1', NULL),
-  (92, 10, 'A2', NULL),
-  (93, 10, 'A3', NULL),
-  (94, 10, 'A4', NULL),
-  (95, 10, 'A4 Allroad', NULL),
-  (96, 10, 'A5', NULL),
-  (97, 10, 'A6', NULL),
-  (98, 10, 'A6 Allroad', NULL),
-  (99, 10, 'A7', NULL),
-  (100, 10, 'A8', NULL),
-  (101, 10, 'Cabriolet', NULL),
-  (102, 10, 'Coupé', NULL),
-  (103, 10, 'e-tron', NULL),
-  (104, 10, 'Q1', NULL),
-  (105, 10, 'Q2', NULL),
-  (106, 10, 'Q3', NULL),
-  (107, 10, 'Q5', NULL),
-  (108, 10, 'Q7', NULL),
-  (109, 10, 'Q8', NULL),
-  (110, 10, 'quattro', NULL),
-  (111, 10, 'R8', NULL),
-  (112, 10, 'RS2', NULL),
-  (113, 10, 'RS3', NULL),
-  (114, 10, 'RS4', NULL),
-  (115, 10, 'RS5', NULL),
-  (116, 10, 'RS6', NULL),
-  (117, 10, 'RS7', NULL),
-  (118, 10, 'RSQ3', NULL),
-  (119, 10, 'S1', NULL),
-  (120, 10, 'S2', NULL),
-  (121, 10, 'S3', NULL),
-  (122, 10, 'S4', NULL),
-  (123, 10, 'S5', NULL),
-  (124, 10, 'S6', NULL),
-  (125, 10, 'S7', NULL),
-  (126, 10, 'S8', NULL),
-  (127, 10, 'SQ2', NULL),
-  (128, 10, 'SQ5', NULL),
-  (129, 10, 'SQ7', NULL),
-  (130, 10, 'SQ8', NULL),
-  (131, 10, 'TT', 'TT'),
-  (132, 10, 'TT RS', 'TT'),
-  (133, 10, 'TTS', 'TT'),
-  (134, 10, 'V8', NULL),
-  (135, 10, 'Other', NULL),
-  (136, 11, 'Other', NULL),
-  (137, 12, 'Other', NULL),
-  (138, 13, 'Arnage', NULL),
-  (139, 13, 'Azure', NULL),
-  (140, 13, 'Bentayga', NULL),
-  (141, 13, 'Brooklands', NULL),
-  (142, 13, 'Continental', 'Continental'),
-  (143, 13, 'Continental Flying Spur', 'Continental'),
-  (144, 13, 'Continental GT', 'Continental'),
-  (145, 13, 'Continental GTC', 'Continental'),
-  (146, 13, 'Continental Supersports', 'Continental'),
-  (147, 13, 'Eight', NULL),
-  (148, 13, 'Flying Spur', NULL),
-  (149, 13, 'Mulsanne', NULL),
-  (150, 13, 'Turbo R', NULL),
-  (151, 13, 'Turbo RT', NULL),
-  (152, 13, 'Turbo S', NULL),
-  (153, 13, 'Other', NULL),
-  (154, 14, '114', '1 Series'),
-  (155, 14, '116', '1 Series'),
-  (156, 14, '118', '1 Series'),
-  (157, 14, '120', '1 Series'),
-  (158, 14, '123', '1 Series'),
-  (159, 14, '125', '1 Series'),
-  (160, 14, '130', '1 Series'),
-  (161, 14, '135', '1 Series'),
-  (162, 14, '1er M Coupé', '1 Series'),
-  (163, 14, '2002', NULL),
-  (164, 14, '214 Active Tourer', '2 Series'),
-  (165, 14, '214 Gran Tourer', '2 Series'),
-  (166, 14, '216', '2 Series'),
-  (167, 14, '216 Active Tourer', '2 Series'),
-  (168, 14, '216 Gran Tourer', '2 Series'),
-  (169, 14, '218', '2 Series'),
-  (170, 14, '218 Active Tourer', '2 Series'),
-  (171, 14, '218 Gran Tourer', '2 Series'),
-  (172, 14, '220', '2 Series'),
-  (173, 14, '220 Active Tourer', '2 Series'),
-  (174, 14, '220 Gran Tourer', '2 Series'),
-  (175, 14, '225', '2 Series'),
-  (176, 14, '225 Active Tourer', '2 Series'),
-  (177, 14, '228', '2 Series'),
-  (178, 14, '230', '2 Series'),
-  (179, 14, '315', '3 Series'),
-  (180, 14, '316', '3 Series'),
-  (181, 14, '318', '3 Series'),
-  (182, 14, '318 Gran Turismo', '3 Series'),
-  (183, 14, '320', '3 Series'),
-  (184, 14, '320 Gran Turismo', '3 Series'),
-  (185, 14, '323', '3 Series'),
-  (186, 14, '324', '3 Series'),
-  (187, 14, '325', '3 Series'),
-  (188, 14, '325 Gran Turismo', '3 Series'),
-  (189, 14, '328', '3 Series'),
-  (190, 14, '328 Gran Turismo', '3 Series'),
-  (191, 14, '330', '3 Series'),
-  (192, 14, '330 Gran Turismo', '3 Series'),
-  (193, 14, '335', '3 Series'),
-  (194, 14, '335 Gran Turismo', '3 Series'),
-  (195, 14, '340', '3 Series'),
-  (196, 14, '340 Gran Turismo', '3 Series'),
-  (197, 14, 'ActiveHybrid 3', '3 Series'),
-  (198, 14, '418', '4 Series'),
-  (199, 14, '418 Gran Coupé', '4 Series'),
-  (200, 14, '420', '4 Series'),
-  (201, 14, '420 Gran Coupé', '4 Series'),
-  (202, 14, '425', '4 Series'),
-  (203, 14, '425 Gran Coupé', '4 Series'),
-  (204, 14, '428', '4 Series'),
-  (205, 14, '428 Gran Coupé', '4 Series'),
-  (206, 14, '430', '4 Series'),
-  (207, 14, '430 Gran Coupé', '4 Series'),
-  (208, 14, '435', '4 Series'),
-  (209, 14, '435 Gran Coupé', '4 Series'),
-  (210, 14, '440', '4 Series'),
-  (211, 14, '440 Gran Coupé', '4 Series'),
-  (212, 14, '518', '5 Series'),
-  (213, 14, '520', '5 Series'),
-  (214, 14, '520 Gran Turismo', '5 Series'),
-  (215, 14, '523', '5 Series'),
-  (216, 14, '524', '5 Series'),
-  (217, 14, '525', '5 Series'),
-  (218, 14, '528', '5 Series'),
-  (219, 14, '530', '5 Series'),
-  (220, 14, '530 Gran Turismo', '5 Series'),
-  (221, 14, '535', '5 Series'),
-  (222, 14, '535 Gran Turismo', '5 Series'),
-  (223, 14, '540', '5 Series'),
-  (224, 14, '545', '5 Series'),
-  (225, 14, '550', '5 Series'),
-  (226, 14, '550 Gran Turismo', '5 Series'),
-  (227, 14, 'ActiveHybrid 5', '5 Series'),
-  (228, 14, '620 Gran Turismo', '6 Series'),
-  (229, 14, '628', '6 Series'),
-  (230, 14, '630', '6 Series'),
-  (231, 14, '630 Gran Turismo', '6 Series'),
-  (232, 14, '633', '6 Series'),
-  (233, 14, '635', '6 Series'),
-  (234, 14, '640', '6 Series'),
-  (235, 14, '640 Gran Coupé', '6 Series'),
-  (236, 14, '640 Gran Turismo', '6 Series'),
-  (237, 14, '645', '6 Series'),
-  (238, 14, '650', '6 Series'),
-  (239, 14, '650 Gran Coupé', '6 Series'),
-  (240, 14, '725', '7 Series'),
-  (241, 14, '728', '7 Series'),
-  (242, 14, '730', '7 Series'),
-  (243, 14, '732', '7 Series'),
-  (244, 14, '735', '7 Series'),
-  (245, 14, '740', '7 Series'),
-  (246, 14, '745', '7 Series'),
-  (247, 14, '750', '7 Series'),
-  (248, 14, '760', '7 Series'),
-  (249, 14, 'ActiveHybrid 7', '7 Series'),
-  (250, 14, '840', NULL),
-  (251, 14, '850', NULL),
-  (252, 14, 'i3', NULL),
-  (253, 14, 'i8', NULL),
-  (254, 14, 'M135', 'M Models'),
-  (255, 14, 'M140i', 'M Models'),
-  (256, 14, 'M2', 'M Models'),
-  (257, 14, 'M235', 'M Models'),
-  (258, 14, 'M240i', 'M Models'),
-  (259, 14, 'M3', 'M Models'),
-  (260, 14, 'M340i', 'M Models'),
-  (261, 14, 'M4', 'M Models'),
-  (262, 14, 'M5', 'M Models'),
-  (263, 14, 'M550', 'M Models'),
-  (264, 14, 'M6', 'M Models'),
-  (265, 14, 'M760', 'M Models'),
-  (266, 14, 'M850', 'M Models'),
-  (267, 14, 'ActiveHybrid X6', 'X Series'),
-  (268, 14, 'X1', 'X Series'),
-  (269, 14, 'X2', 'X Series'),
-  (270, 14, 'X3', 'X Series'),
-  (271, 14, 'X3 M', 'X Series'),
-  (272, 14, 'X3 M40', 'X Series'),
-  (273, 14, 'X4', 'X Series'),
-  (274, 14, 'X4 M', 'X Series'),
-  (275, 14, 'X4 M40', 'X Series'),
-  (276, 14, 'X5', 'X Series'),
-  (277, 14, 'X5 M', 'X Series'),
-  (278, 14, 'X5 M50', 'X Series'),
-  (279, 14, 'X6', 'X Series'),
-  (280, 14, 'X6 M', 'X Series'),
-  (281, 14, 'X6 M50', 'X Series'),
-  (282, 14, 'X7', 'X Series'),
-  (283, 14, 'Z1', 'Z Series'),
-  (284, 14, 'Z3', 'Z Series'),
-  (285, 14, 'Z3 M', 'Z Series'),
-  (286, 14, 'Z4', 'Z Series'),
-  (287, 14, 'Z4 M', 'Z Series'),
-  (288, 14, 'Z8', 'Z Series'),
-  (289, 14, 'Other', NULL),
-  (290, 15, 'Other', NULL),
-  (291, 16, 'BC3', NULL),
-  (292, 16, 'BS2', NULL),
-  (293, 16, 'BS4', NULL),
-  (294, 16, 'BS6', NULL),
-  (295, 16, 'Other', NULL),
-  (296, 17, 'Chiron', NULL),
-  (297, 17, 'EB 110', NULL),
-  (298, 17, 'Veyron', NULL),
-  (299, 17, 'Other', NULL),
-  (300, 18, 'Century', NULL),
-  (301, 18, 'Electra', NULL),
-  (302, 18, 'Enclave', NULL),
-  (303, 18, 'La Crosse', NULL),
-  (304, 18, 'Le Sabre', NULL),
-  (305, 18, 'Park Avenue', NULL),
-  (306, 18, 'Regal', NULL),
-  (307, 18, 'Riviera', NULL),
-  (308, 18, 'Roadmaster', NULL),
-  (309, 18, 'Skylark', NULL),
-  (310, 18, 'Other', NULL),
-  (311, 19, 'Allante', NULL),
-  (312, 19, 'ATS', NULL),
-  (313, 19, 'BLS', NULL),
-  (314, 19, 'CT6', NULL),
-  (315, 19, 'CTS', NULL),
-  (316, 19, 'Deville', NULL),
-  (317, 19, 'Eldorado', NULL),
-  (318, 19, 'Escalade', NULL),
-  (319, 19, 'Fleetwood', NULL),
-  (320, 19, 'Seville', NULL),
-  (321, 19, 'SRX', NULL),
-  (322, 19, 'STS', NULL),
-  (323, 19, 'XLR', NULL),
-  (324, 19, 'XT5', NULL),
-  (325, 19, 'Other', NULL),
-  (326, 20, 'Other', NULL),
-  (327, 21, 'Other', NULL),
-  (328, 22, 'Other', NULL),
-  (329, 23, '2500', NULL),
-  (330, 23, 'Alero', NULL),
-  (331, 23, 'Astro', NULL),
-  (332, 23, 'Avalanche', NULL),
-  (333, 23, 'Aveo', NULL),
-  (334, 23, 'Beretta', NULL),
-  (335, 23, 'Blazer', NULL),
-  (336, 23, 'C1500', NULL),
-  (337, 23, 'Camaro', NULL),
-  (338, 23, 'Caprice', NULL),
-  (339, 23, 'Captiva', NULL),
-  (340, 23, 'Cavalier', NULL),
-  (341, 23, 'Chevelle', NULL),
-  (342, 23, 'Chevy Van', NULL),
-  (343, 23, 'Citation', NULL),
-  (344, 23, 'Colorado', NULL),
-  (345, 23, 'Corsica', NULL),
-  (346, 23, 'Cruze', NULL),
-  (347, 23, 'El Camino', NULL),
-  (348, 23, 'Epica', NULL),
-  (349, 23, 'Evanda', NULL),
-  (350, 23, 'Express', NULL),
-  (351, 23, 'G', NULL),
-  (352, 23, 'HHR', NULL),
-  (353, 23, 'Impala', NULL),
-  (354, 23, 'K1500', NULL),
-  (355, 23, 'K30', NULL),
-  (356, 23, 'Kalos', NULL),
-  (357, 23, 'Lacetti', NULL),
-  (358, 23, 'Lumina', NULL),
-  (359, 23, 'Malibu', NULL),
-  (360, 23, 'Matiz', NULL),
-  (361, 23, 'Niva', NULL),
-  (362, 23, 'Nubira', NULL),
-  (363, 23, 'Orlando', NULL),
-  (364, 23, 'Rezzo', NULL),
-  (365, 23, 'S-10', NULL),
-  (366, 23, 'Silverado', NULL),
-  (367, 23, 'Spark', NULL),
-  (368, 23, 'SSR', NULL),
-  (369, 23, 'Suburban', NULL),
-  (370, 23, 'Tahoe', NULL),
-  (371, 23, 'Trailblazer', NULL),
-  (372, 23, 'Trans Sport', NULL),
-  (373, 23, 'Traverse', NULL),
-  (374, 23, 'Trax', NULL),
-  (375, 23, 'Venture', NULL),
-  (376, 23, 'Volt', NULL),
-  (377, 23, 'Other', NULL),
-  (378, 24, '200', NULL),
-  (379, 24, '300C', NULL),
-  (380, 24, '300 M', NULL),
-  (381, 24, 'Aspen', NULL),
-  (382, 24, 'Crossfire', NULL),
-  (383, 24, 'Daytona', NULL),
-  (384, 24, 'ES', NULL),
-  (385, 24, 'Grand Voyager', NULL),
-  (386, 24, 'GS', NULL),
-  (387, 24, 'GTS', NULL),
-  (388, 24, 'Imperial', NULL),
-  (389, 24, 'Le Baron', NULL),
-  (390, 24, 'Neon', NULL),
-  (391, 24, 'New Yorker', NULL),
-  (392, 24, 'Pacifica', NULL),
-  (393, 24, 'PT Cruiser', NULL),
-  (394, 24, 'Saratoga', NULL),
-  (395, 24, 'Sebring', NULL),
-  (396, 24, 'Stratus', NULL),
-  (397, 24, 'Valiant', NULL),
-  (398, 24, 'Viper', NULL),
-  (399, 24, 'Vision', NULL),
-  (400, 24, 'Voyager', NULL),
-  (401, 24, 'Other', NULL),
-  (402, 25, '2 CV', NULL),
-  (403, 25, 'AX', NULL),
-  (404, 25, 'Berlingo', NULL),
-  (405, 25, 'BX', NULL),
-  (406, 25, 'C1', NULL),
-  (407, 25, 'C2', NULL),
-  (408, 25, 'C3', NULL),
-  (409, 25, 'C3 Aircross', NULL),
-  (410, 25, 'C3 Picasso', NULL),
-  (411, 25, 'C4', NULL),
-  (412, 25, 'C4 Aircross', NULL),
-  (413, 25, 'C4 Cactus', NULL),
-  (414, 25, 'C4 Picasso', NULL),
-  (415, 25, 'C4 SpaceTourer', NULL),
-  (416, 25, 'C5', NULL),
-  (417, 25, 'C5 Aircross', NULL),
-  (418, 25, 'C6', NULL),
-  (419, 25, 'C8', NULL),
-  (420, 25, 'C-Crosser', NULL),
-  (421, 25, 'C-Elysée', NULL),
-  (422, 25, 'CX', NULL),
-  (423, 25, 'C-Zero', NULL),
-  (424, 25, 'DS', NULL),
-  (425, 25, 'DS3', NULL),
-  (426, 25, 'DS4', NULL),
-  (427, 25, 'DS4 Crossback', NULL),
-  (428, 25, 'DS5', NULL),
-  (429, 25, 'E-MEHARI', NULL),
-  (430, 25, 'Evasion', NULL),
-  (431, 25, 'Grand C4 Picasso / SpaceTourer', NULL),
-  (432, 25, 'GSA', NULL),
-  (433, 25, 'Jumper', NULL),
-  (434, 25, 'Jumpy', NULL),
-  (435, 25, 'Nemo', NULL),
-  (436, 25, 'SAXO', NULL),
-  (437, 25, 'SM', NULL),
-  (438, 25, 'SpaceTourer', NULL),
-  (439, 25, 'Visa', NULL),
-  (440, 25, 'Xantia', NULL),
-  (441, 25, 'XM', NULL),
-  (442, 25, 'Xsara', NULL),
-  (443, 25, 'Xsara Picasso', NULL),
-  (444, 25, 'ZX', NULL),
-  (445, 25, 'Other', NULL),
-  (446, 26, 'Other', NULL),
-  (447, 27, 'C1', NULL),
-  (448, 27, 'C2', NULL),
-  (449, 27, 'C3', NULL),
-  (450, 27, 'C4', NULL),
-  (451, 27, 'C5', NULL),
-  (452, 27, 'C6', NULL),
-  (453, 27, 'C7', NULL),
-  (454, 27, 'C8', NULL),
-  (455, 27, 'Z06', NULL),
-  (456, 27, 'ZR 1', NULL),
-  (457, 27, 'Other', NULL),
-  (458, 28, 'Arona', NULL),
-  (459, 28, 'Ateca', NULL),
-  (460, 28, 'Ibiza', NULL),
-  (461, 28, 'Other', NULL),
-  (462, 29, 'Dokker', NULL),
-  (463, 29, 'Duster', NULL),
-  (464, 29, 'Lodgy', NULL),
-  (465, 29, 'Logan', NULL),
-  (466, 29, 'Logan Pick-Up', NULL),
-  (467, 29, 'Pick Up', NULL),
-  (468, 29, 'Sandero', NULL),
-  (469, 29, 'Other', NULL),
-  (470, 30, 'Espero', NULL),
-  (471, 30, 'Evanda', NULL),
-  (472, 30, 'Kalos', NULL),
-  (473, 30, 'Korando', NULL),
-  (474, 30, 'Lacetti', NULL),
-  (475, 30, 'Lanos', NULL),
-  (476, 30, 'Leganza', NULL),
-  (477, 30, 'Matiz', NULL),
-  (478, 30, 'Musso', NULL),
-  (479, 30, 'Nexia', NULL),
-  (480, 30, 'Nubira', NULL),
-  (481, 30, 'Rezzo', NULL),
-  (482, 30, 'Tacuma', NULL),
-  (483, 30, 'Other', NULL),
-  (484, 31, 'Applause', NULL),
-  (485, 31, 'Charade', NULL),
-  (486, 31, 'Charmant', NULL),
-  (487, 31, 'Copen', NULL),
-  (488, 31, 'Cuore', NULL),
-  (489, 31, 'Feroza/Sportrak', NULL),
-  (490, 31, 'Freeclimber', NULL),
-  (491, 31, 'Gran Move', NULL),
-  (492, 31, 'Hijet', NULL),
-  (493, 31, 'MATERIA', NULL),
-  (494, 31, 'Move', NULL),
-  (495, 31, 'Rocky/Fourtrak', NULL),
-  (496, 31, 'Sirion', NULL),
-  (497, 31, 'Terios', NULL),
-  (498, 31, 'TREVIS', NULL),
-  (499, 31, 'YRV', NULL),
-  (500, 31, 'Other', NULL),
-  (501, 32, 'Guarà', NULL),
-  (502, 32, 'Pantera', NULL),
-  (503, 32, 'Other', NULL),
-  (504, 33, 'Avenger', NULL),
-  (505, 33, 'Caliber', NULL),
-  (506, 33, 'Challenger', NULL),
-  (507, 33, 'Charger', NULL),
-  (508, 33, 'Dakota', NULL),
-  (509, 33, 'Dart', NULL),
-  (510, 33, 'Demon', NULL),
-  (511, 33, 'Durango', NULL),
-  (512, 33, 'Grand Caravan', NULL),
-  (513, 33, 'Hornet', NULL),
-  (514, 33, 'Journey', NULL),
-  (515, 33, 'Magnum', NULL),
-  (516, 33, 'Neon', NULL),
-  (517, 33, 'Nitro', NULL),
-  (518, 33, 'RAM', NULL),
-  (519, 33, 'Stealth', NULL),
-  (520, 33, 'Viper', NULL),
-  (521, 33, 'Other', NULL),
-  (522, 34, 'D8', NULL),
-  (523, 34, 'S7', NULL),
-  (524, 34, 'S8', NULL),
-  (525, 34, 'Other', NULL),
-  (526, 35, 'DS3', NULL),
-  (527, 35, 'DS3 Crossback', NULL),
-  (528, 35, 'DS4', NULL),
-  (529, 35, 'DS4 Crossback', NULL),
-  (530, 35, 'DS5', NULL),
-  (531, 35, 'DS7 Crossback', NULL),
-  (532, 35, 'Other', NULL),
-  (533, 36, '208', NULL),
-  (534, 36, '246', NULL),
-  (535, 36, '250', NULL),
-  (536, 36, '275', NULL),
-  (537, 36, '288', NULL),
-  (538, 36, '308', NULL),
-  (539, 36, '328', NULL),
-  (540, 36, '330', NULL),
-  (541, 36, '348', NULL),
-  (542, 36, '360', NULL),
-  (543, 36, '365', NULL),
-  (544, 36, '400', NULL),
-  (545, 36, '412', NULL),
-  (546, 36, '456', NULL),
-  (547, 36, '458', NULL),
-  (548, 36, '488 GTB', NULL),
-  (549, 36, '488 Pista', NULL),
-  (550, 36, '488 Spider', NULL),
-  (551, 36, '512', NULL),
-  (552, 36, '550', NULL),
-  (553, 36, '575', NULL),
-  (554, 36, '599 GTB', NULL),
-  (555, 36, '599 GTO', NULL),
-  (556, 36, '599 SA Aperta', NULL),
-  (557, 36, '612', NULL),
-  (558, 36, '750', NULL),
-  (559, 36, '812', NULL),
-  (560, 36, 'California', NULL),
-  (561, 36, 'Daytona', NULL),
-  (562, 36, 'Dino GT4', NULL),
-  (563, 36, 'Enzo Ferrari', NULL),
-  (564, 36, 'F12', NULL),
-  (565, 36, 'F355', NULL),
-  (566, 36, 'F40', NULL),
-  (567, 36, 'F430', NULL),
-  (568, 36, 'F50', NULL),
-  (569, 36, 'FF', NULL),
-  (570, 36, 'GTC4Lusso', NULL),
-  (571, 36, 'LaFerrari', NULL),
-  (572, 36, 'Mondial', NULL),
-  (573, 36, 'Portofino', NULL),
-  (574, 36, 'Superamerica', NULL),
-  (575, 36, 'Testarossa', NULL),
-  (576, 36, 'Other', NULL),
-  (577, 37, '124', NULL),
-  (578, 37, '124 Spider', NULL),
-  (579, 37, '126', NULL),
-  (580, 37, '127', NULL),
-  (581, 37, '130', NULL),
-  (582, 37, '131', NULL),
-  (583, 37, '500', NULL),
-  (584, 37, '500C', NULL),
-  (585, 37, '500L', NULL),
-  (586, 37, '500L Cross', NULL),
-  (587, 37, '500L Living', NULL),
-  (588, 37, '500L Trekking', NULL),
-  (589, 37, '500L Urban', NULL),
-  (590, 37, '500L Wagon', NULL),
-  (591, 37, '500S', NULL),
-  (592, 37, '500X', NULL),
-  (593, 37, 'Albea', NULL),
-  (594, 37, 'Barchetta', NULL),
-  (595, 37, 'Brava', NULL),
-  (596, 37, 'Bravo', NULL),
-  (597, 37, 'Cinquecento', NULL),
-  (598, 37, 'Coupe', NULL),
-  (599, 37, 'Croma', NULL),
-  (600, 37, 'Dino', NULL),
-  (601, 37, 'Doblo', NULL),
-  (602, 37, 'Ducato', NULL),
-  (603, 37, 'Fiorino', NULL),
-  (604, 37, 'Freemont', NULL),
-  (605, 37, 'Fullback', NULL),
-  (606, 37, 'Grande Punto', NULL),
-  (607, 37, 'Idea', NULL),
-  (608, 37, 'Linea', NULL),
-  (609, 37, 'Marea', NULL),
-  (610, 37, 'Marengo', NULL),
-  (611, 37, 'Multipla', NULL),
-  (612, 37, 'New Panda', NULL),
-  (613, 37, 'Palio', NULL),
-  (614, 37, 'Panda', NULL),
-  (615, 37, 'Punto', NULL),
-  (616, 37, 'Punto Evo', NULL),
-  (617, 37, 'Qubo', NULL),
-  (618, 37, 'Regata', NULL),
-  (619, 37, 'Ritmo', NULL),
-  (620, 37, 'Scudo', NULL),
-  (621, 37, 'Sedici', NULL),
-  (622, 37, 'Seicento', NULL),
-  (623, 37, 'Siena', NULL),
-  (624, 37, 'Spider Europa', NULL),
-  (625, 37, 'Stilo', NULL),
-  (626, 37, 'Strada', NULL),
-  (627, 37, 'Talento', NULL),
-  (628, 37, 'Tempra', NULL),
-  (629, 37, 'Tipo', NULL),
-  (630, 37, 'Ulysse', NULL),
-  (631, 37, 'Uno', NULL),
-  (632, 37, 'X 1/9', NULL),
-  (633, 37, 'Other', NULL),
-  (634, 38, 'Karma', NULL),
-  (635, 38, 'Other', NULL),
-  (636, 39, 'Aerostar', NULL),
-  (637, 39, 'B-Max', NULL),
-  (638, 39, 'Bronco', NULL),
-  (639, 39, 'Capri', NULL),
-  (640, 39, 'C-Max', NULL),
-  (641, 39, 'Cougar', NULL),
-  (642, 39, 'Courier', NULL),
-  (643, 39, 'Crown', NULL),
-  (644, 39, 'Econoline', NULL),
-  (645, 39, 'Econovan', NULL),
-  (646, 39, 'EcoSport', NULL),
-  (647, 39, 'Edge', NULL),
-  (648, 39, 'Escape', NULL),
-  (649, 39, 'Escort', NULL),
-  (650, 39, 'Excursion', NULL),
-  (651, 39, 'Expedition', NULL),
-  (652, 39, 'Explorer', NULL),
-  (653, 39, 'Express', NULL),
-  (654, 39, 'F 100', NULL),
-  (655, 39, 'F 150', NULL),
-  (656, 39, 'F 250', NULL),
-  (657, 39, 'F 350', NULL),
-  (658, 39, 'Fairlane', NULL),
-  (659, 39, 'Falcon', NULL),
-  (660, 39, 'Fiesta', NULL),
-  (661, 39, 'Flex', NULL),
-  (662, 39, 'Focus', NULL),
-  (663, 39, 'Fusion', NULL),
-  (664, 39, 'Galaxy', NULL),
-  (665, 39, 'Granada', NULL),
-  (666, 39, 'Grand C-Max', NULL),
-  (667, 39, 'Grand Tourneo', NULL),
-  (668, 39, 'GT', NULL),
-  (669, 39, 'Ka/Ka+', NULL),
-  (670, 39, 'Kuga', NULL),
-  (671, 39, 'Maverick', NULL),
-  (672, 39, 'Mercury', NULL),
-  (673, 39, 'Mondeo', NULL),
-  (674, 39, 'Mustang', NULL),
-  (675, 39, 'Orion', NULL),
-  (676, 39, 'Probe', NULL),
-  (677, 39, 'Puma', NULL),
-  (678, 39, 'Ranger', NULL),
-  (679, 39, 'Raptor', NULL),
-  (680, 39, 'Scorpio', NULL),
-  (681, 39, 'Sierra', NULL),
-  (682, 39, 'S-Max', NULL),
-  (683, 39, 'Sportka', NULL),
-  (684, 39, 'Streetka', NULL),
-  (685, 39, 'Taunus', NULL),
-  (686, 39, 'Taurus', NULL),
-  (687, 39, 'Thunderbird', NULL),
-  (688, 39, 'Tourneo', 'Tourneo'),
-  (689, 39, 'Tourneo Connect', 'Tourneo'),
-  (690, 39, 'Tourneo Courier', 'Tourneo'),
-  (691, 39, 'Tourneo Custom', 'Tourneo'),
-  (692, 39, 'Transit', 'Transit'),
-  (693, 39, 'Transit Connect', 'Transit'),
-  (694, 39, 'Transit Courier', 'Transit'),
-  (695, 39, 'Transit Custom', 'Transit'),
-  (696, 39, 'Windstar', NULL),
-  (697, 39, 'Other', NULL),
-  (698, 40, 'Other', NULL),
-  (699, 41, 'Other', NULL),
-  (700, 42, 'Acadia', NULL),
-  (701, 42, 'Envoy', NULL),
-  (702, 42, 'Safari', NULL),
-  (703, 42, 'Savana', NULL),
-  (704, 42, 'Sierra', NULL),
-  (705, 42, 'Sonoma', NULL),
-  (706, 42, 'Syclone', NULL),
-  (707, 42, 'Terrain', NULL),
-  (708, 42, 'Typhoon', NULL),
-  (709, 42, 'Vandura', NULL),
-  (710, 42, 'Yukon', NULL),
-  (711, 42, 'Other', NULL),
-  (712, 43, 'Sonique', NULL),
-  (713, 43, 'Other', NULL),
-  (714, 44, 'Other', NULL),
-  (715, 45, 'Other', NULL),
-  (716, 46, 'Accord', NULL),
-  (717, 46, 'Aerodeck', NULL),
-  (718, 46, 'City', NULL),
-  (719, 46, 'Civic', NULL),
-  (720, 46, 'Clarity', NULL),
-  (721, 46, 'Concerto', NULL),
-  (722, 46, 'CR-V', NULL),
-  (723, 46, 'CRX', NULL),
-  (724, 46, 'CR-Z', NULL),
-  (725, 46, 'e', NULL),
-  (726, 46, 'Element', NULL),
-  (727, 46, 'FR-V', NULL),
-  (728, 46, 'HR-V', NULL),
-  (729, 46, 'Insight', NULL),
-  (730, 46, 'Integra', NULL),
-  (731, 46, 'Jazz', NULL),
-  (732, 46, 'Legend', NULL),
-  (733, 46, 'Logo', NULL),
-  (734, 46, 'NSX', NULL),
-  (735, 46, 'Odyssey', NULL),
-  (736, 46, 'Pilot', NULL),
-  (737, 46, 'Prelude', NULL),
-  (738, 46, 'Ridgeline', NULL),
-  (739, 46, 'S2000', NULL),
-  (740, 46, 'Shuttle', NULL),
-  (741, 46, 'Stream', NULL),
-  (742, 46, 'Other', NULL),
-  (743, 47, 'H1', NULL),
-  (744, 47, 'H2', NULL),
-  (745, 47, 'H3', NULL),
-  (746, 47, 'Other', NULL),
-  (747, 48, 'Accent', NULL),
-  (748, 48, 'Atos', NULL),
-  (749, 48, 'Azera', NULL),
-  (750, 48, 'Coupe', NULL),
-  (751, 48, 'Elantra', NULL),
-  (752, 48, 'Excel', NULL),
-  (753, 48, 'Galloper', NULL),
-  (754, 48, 'Genesis', NULL),
-  (755, 48, 'Getz', NULL),
-  (756, 48, 'Grandeur', NULL),
-  (757, 48, 'Grand Santa Fe', NULL),
-  (758, 48, 'H-1', NULL),
-  (759, 48, 'H 100', NULL),
-  (760, 48, 'H-1 Starex', NULL),
-  (761, 48, 'H 200', NULL),
-  (762, 48, 'H350', NULL),
-  (763, 48, 'i10', NULL),
-  (764, 48, 'i20', NULL),
-  (765, 48, 'i30', NULL),
-  (766, 48, 'i40', NULL),
-  (767, 48, 'i50', NULL),
-  (768, 48, 'IONIQ', NULL),
-  (769, 48, 'ix20', NULL),
-  (770, 48, 'ix35', NULL),
-  (771, 48, 'ix55', NULL),
-  (772, 48, 'Kona', NULL),
-  (773, 48, 'Lantra', NULL),
-  (774, 48, 'Matrix', NULL),
-  (775, 48, 'Nexo', NULL),
-  (776, 48, 'Pony', NULL),
-  (777, 48, 'Santa Fe', NULL),
-  (778, 48, 'Santamo', NULL),
-  (779, 48, 'S-Coupe', NULL),
-  (780, 48, 'Sonata', NULL),
-  (781, 48, 'Terracan', NULL),
-  (782, 48, 'Trajet', NULL),
-  (783, 48, 'Tucson', NULL),
-  (784, 48, 'Veloster', NULL),
-  (785, 48, 'Veracruz', NULL),
-  (786, 48, 'XG 30', NULL),
-  (787, 48, 'XG 350', NULL),
-  (788, 48, 'Other', NULL),
-  (789, 49, 'EX30', NULL),
-  (790, 49, 'EX35', NULL),
-  (791, 49, 'EX37', NULL),
-  (792, 49, 'FX', NULL),
-  (793, 49, 'G35', NULL),
-  (794, 49, 'G37', NULL),
-  (795, 49, 'M30', NULL),
-  (796, 49, 'M35', NULL),
-  (797, 49, 'M37', NULL),
-  (798, 49, 'Q30', NULL),
-  (799, 49, 'Q45', NULL),
-  (800, 49, 'Q50', NULL),
-  (801, 49, 'Q60', NULL),
-  (802, 49, 'Q70', NULL),
-  (803, 49, 'QX30', NULL),
-  (804, 49, 'QX50', NULL),
-  (805, 49, 'QX56', NULL),
-  (806, 49, 'QX70', NULL),
-  (807, 49, 'Other', NULL),
-  (808, 50, 'Campo', NULL),
-  (809, 50, 'D-Max', NULL),
-  (810, 50, 'Gemini', NULL),
-  (811, 50, 'Midi', NULL),
-  (812, 50, 'PICK UP', NULL),
-  (813, 50, 'Trooper', NULL),
-  (814, 50, 'Other', NULL),
-  (815, 51, 'Massif', NULL),
-  (816, 51, 'Other', NULL),
-  (817, 52, 'Daimler', NULL),
-  (818, 52, 'E-Pace', NULL),
-  (819, 52, 'E-Type', NULL),
-  (820, 52, 'F-Pace', NULL),
-  (821, 52, 'F-Type', NULL),
-  (822, 52, 'I-Pace', NULL),
-  (823, 52, 'MK II', NULL),
-  (824, 52, 'S-Type', NULL),
-  (825, 52, 'XE', NULL),
-  (826, 52, 'XF', NULL),
-  (827, 52, 'XJ', NULL),
-  (828, 52, 'XJ12', NULL),
-  (829, 52, 'XJ40', NULL),
-  (830, 52, 'XJ6', NULL),
-  (831, 52, 'XJ8', NULL),
-  (832, 52, 'XJR', NULL),
-  (833, 52, 'XJS', NULL),
-  (834, 52, 'XJSC', NULL),
-  (835, 52, 'XK', NULL),
-  (836, 52, 'XK8', NULL),
-  (837, 52, 'XKR', NULL),
-  (838, 52, 'X-Type', NULL),
-  (839, 52, 'Other', NULL),
-  (840, 53, 'Cherokee', NULL),
-  (841, 53, 'CJ', NULL),
-  (842, 53, 'Comanche', NULL),
-  (843, 53, 'Commander', NULL),
-  (844, 53, 'Compass', NULL),
-  (845, 53, 'Grand Cherokee', NULL),
-  (846, 53, 'Patriot', NULL),
-  (847, 53, 'Renegade', NULL),
-  (848, 53, 'Wagoneer', NULL),
-  (849, 53, 'Willys', NULL),
-  (850, 53, 'Wrangler', NULL),
-  (851, 53, 'Other', NULL),
-  (852, 54, 'Besta', NULL),
-  (853, 54, 'Borrego', NULL),
-  (854, 54, 'Carens', NULL),
-  (855, 54, 'Carnival', NULL),
-  (856, 54, 'cee''d / Ceed', NULL),
-  (857, 54, 'cee''d Sportswagon', NULL),
-  (858, 54, 'Cerato', NULL),
-  (859, 54, 'Clarus', NULL),
-  (860, 54, 'Elan', NULL),
-  (861, 54, 'Joice', NULL),
-  (862, 54, 'K2500', NULL),
-  (863, 54, 'K2700', NULL),
-  (864, 54, 'Leo', NULL),
-  (865, 54, 'Magentis', NULL),
-  (866, 54, 'Mentor', NULL),
-  (867, 54, 'Mini', NULL),
-  (868, 54, 'Niro', NULL),
-  (869, 54, 'Opirus', NULL),
-  (870, 54, 'Optima', NULL),
-  (871, 54, 'Picanto', NULL),
-  (872, 54, 'Pregio', NULL),
-  (873, 54, 'Pride', NULL),
-  (874, 54, 'pro_cee''d / ProCeed', NULL),
-  (875, 54, 'Retona', NULL),
-  (876, 54, 'Rio', NULL),
-  (877, 54, 'Roadster', NULL),
-  (878, 54, 'Rocsta', NULL),
-  (879, 54, 'Sephia', NULL),
-  (880, 54, 'Shuma', NULL),
-  (881, 54, 'Sorento', NULL),
-  (882, 54, 'Soul', NULL),
-  (883, 54, 'Sportage', NULL),
-  (884, 54, 'Stinger', NULL),
-  (885, 54, 'Stonic', NULL),
-  (886, 54, 'Venga', NULL),
-  (887, 54, 'XCeed', NULL),
-  (888, 54, 'Other', NULL),
-  (889, 55, 'Agera', NULL),
-  (890, 55, 'CCR', NULL),
-  (891, 55, 'CCXR', NULL),
-  (892, 55, 'Other', NULL),
-  (893, 56, 'X-BOW', NULL),
-  (894, 56, 'Other', NULL),
-  (895, 57, '110', NULL),
-  (896, 57, '111', NULL),
-  (897, 57, '112', NULL),
-  (898, 57, '1200', NULL),
-  (899, 57, '2107', NULL),
-  (900, 57, '2110', NULL),
-  (901, 57, '2111', NULL),
-  (902, 57, '2112', NULL),
-  (903, 57, 'Aleko', NULL),
-  (904, 57, 'Forma', NULL),
-  (905, 57, 'Granta', NULL),
-  (906, 57, 'Kalina', NULL),
-  (907, 57, 'Niva', NULL),
-  (908, 57, 'Nova', NULL),
-  (909, 57, 'Priora', NULL),
-  (910, 57, 'Samara', NULL),
-  (911, 57, 'Taiga', NULL),
-  (912, 57, 'Urban', NULL),
-  (913, 57, 'Vesta', NULL),
-  (914, 57, 'X-Ray', NULL),
-  (915, 57, 'Other', NULL),
-  (916, 58, 'Aventador', NULL),
-  (917, 58, 'Countach', NULL),
-  (918, 58, 'Diablo', NULL),
-  (919, 58, 'Espada', NULL),
-  (920, 58, 'Gallardo', NULL),
-  (921, 58, 'Huracán', NULL),
-  (922, 58, 'Jalpa', NULL),
-  (923, 58, 'LM', NULL),
-  (924, 58, 'Miura', NULL),
-  (925, 58, 'Murciélago', NULL),
-  (926, 58, 'Urraco', NULL),
-  (927, 58, 'Urus', NULL),
-  (928, 58, 'Other', NULL),
-  (929, 59, 'Beta', NULL),
-  (930, 59, 'Dedra', NULL),
-  (931, 59, 'Delta', NULL),
-  (932, 59, 'Flaminia', NULL),
-  (933, 59, 'Flavia', NULL),
-  (934, 59, 'Fulvia', NULL),
-  (935, 59, 'Gamma', NULL),
-  (936, 59, 'Kappa', NULL),
-  (937, 59, 'Lybra', NULL),
-  (938, 59, 'MUSA', NULL),
-  (939, 59, 'Phedra', NULL),
-  (940, 59, 'Prisma', NULL),
-  (941, 59, 'Stratos', NULL),
-  (942, 59, 'Thema', NULL),
-  (943, 59, 'Thesis', NULL),
-  (944, 59, 'Voyager', NULL),
-  (945, 59, 'Ypsilon', NULL),
-  (946, 59, 'Zeta', NULL),
-  (947, 59, 'Other', NULL),
-  (948, 60, 'Defender', NULL),
-  (949, 60, 'Discovery', NULL),
-  (950, 60, 'Discovery Sport', NULL),
-  (951, 60, 'Freelander', NULL),
-  (952, 60, 'Range Rover', NULL),
-  (953, 60, 'Range Rover Evoque', NULL),
-  (954, 60, 'Range Rover Sport', NULL),
-  (955, 60, 'Range Rover Velar', NULL),
-  (956, 60, 'Serie I', NULL),
-  (957, 60, 'Serie II', NULL),
-  (958, 60, 'Serie III', NULL),
-  (959, 60, 'Other', NULL),
-  (960, 61, 'CV-9', NULL),
-  (961, 61, 'S', NULL),
-  (962, 61, 'SC2', NULL),
-  (963, 61, 'SC4', NULL),
-  (964, 61, 'Other', NULL),
-  (965, 62, 'CT 200h', NULL),
-  (966, 62, 'ES 300', 'ES Series'),
-  (967, 62, 'ES 330', 'ES Series'),
-  (968, 62, 'ES 350', 'ES Series'),
-  (969, 62, 'GS 250', 'GS Series'),
-  (970, 62, 'GS 300', 'GS Series'),
-  (971, 62, 'GS 350', 'GS Series'),
-  (972, 62, 'GS 430', 'GS Series'),
-  (973, 62, 'GS 450', 'GS Series'),
-  (974, 62, 'GS 460', 'GS Series'),
-  (975, 62, 'GS F', 'GS Series'),
-  (976, 62, 'GX 470', NULL),
-  (977, 62, 'IS 200', 'IS Series'),
-  (978, 62, 'IS 220', 'IS Series'),
-  (979, 62, 'IS 250', 'IS Series'),
-  (980, 62, 'IS 300', 'IS Series'),
-  (981, 62, 'IS 350', 'IS Series'),
-  (982, 62, 'IS-F', 'IS Series'),
-  (983, 62, 'LC 500', NULL),
-  (984, 62, 'LC 500h', NULL),
-  (985, 62, 'LFA', NULL),
-  (986, 62, 'LS 400', 'LS Series'),
-  (987, 62, 'LS 430', 'LS Series'),
-  (988, 62, 'LS 460', 'LS Series'),
-  (989, 62, 'LS 500', 'LS Series'),
-  (990, 62, 'LS 600', 'LS Series'),
-  (991, 62, 'LX 470', 'LX Series'),
-  (992, 62, 'LX 570', 'LX Series'),
-  (993, 62, 'NX 200', 'NX Series'),
-  (994, 62, 'NX 300', 'NX Series'),
-  (995, 62, 'RC 200', 'RC Series'),
-  (996, 62, 'RC 300', 'RC Series'),
-  (997, 62, 'RC 350', 'RC Series'),
-  (998, 62, 'RC F', 'RC Series'),
-  (999, 62, 'RX 200', 'RX Series');
-INSERT INTO CarModels
-  (Id, MakeId, Name, Series)
-VALUES
-  (1000, 62, 'RX 300', 'RX Series'),
-  (1001, 62, 'RX 330', 'RX Series'),
-  (1002, 62, 'RX 350', 'RX Series'),
-  (1003, 62, 'RX 400', 'RX Series'),
-  (1004, 62, 'RX 450', 'RX Series'),
-  (1005, 62, 'SC 400', NULL),
-  (1006, 62, 'SC 430', NULL),
-  (1007, 62, 'UX', NULL),
-  (1008, 62, 'Other', NULL),
-  (1009, 63, 'Ambra', NULL),
-  (1010, 63, 'Be Sun', NULL),
-  (1011, 63, 'JS 50', NULL),
-  (1012, 63, 'JS 50 L', NULL),
-  (1013, 63, 'JS RC', NULL),
-  (1014, 63, 'Nova', NULL),
-  (1015, 63, 'Optima', NULL),
-  (1016, 63, 'X - Too', NULL),
-  (1017, 63, 'Other', NULL),
-  (1018, 64, 'Aviator', NULL),
-  (1019, 64, 'Continental', NULL),
-  (1020, 64, 'LS', NULL),
-  (1021, 64, 'Mark', NULL),
-  (1022, 64, 'Navigator', NULL),
-  (1023, 64, 'Town Car', NULL),
-  (1024, 64, 'Other', NULL),
-  (1025, 65, '340 R', NULL),
-  (1026, 65, 'Cortina', NULL),
-  (1027, 65, 'Elan', NULL),
-  (1028, 65, 'Elise', NULL),
-  (1029, 65, 'Elite', NULL),
-  (1030, 65, 'Esprit', NULL),
-  (1031, 65, 'Europa', NULL),
-  (1032, 65, 'Evora', NULL),
-  (1033, 65, 'Excel', NULL),
-  (1034, 65, 'Exige', NULL),
-  (1035, 65, 'Super Seven', NULL),
-  (1036, 65, 'Other', NULL),
-  (1037, 66, 'Other', NULL),
-  (1038, 67, '222', NULL),
-  (1039, 67, '224', NULL),
-  (1040, 67, '228', NULL),
-  (1041, 67, '3200', NULL),
-  (1042, 67, '418', NULL),
-  (1043, 67, '420', NULL),
-  (1044, 67, '4200', NULL),
-  (1045, 67, '422', NULL),
-  (1046, 67, '424', NULL),
-  (1047, 67, '430', NULL),
-  (1048, 67, 'Biturbo', NULL),
-  (1049, 67, 'Ghibli', NULL),
-  (1050, 67, 'GranCabrio', NULL),
-  (1051, 67, 'Gransport', NULL),
-  (1052, 67, 'Granturismo', NULL),
-  (1053, 67, 'Indy', NULL),
-  (1054, 67, 'Karif', NULL),
-  (1055, 67, 'Levante', NULL),
-  (1056, 67, 'MC12', NULL),
-  (1057, 67, 'Merak', NULL),
-  (1058, 67, 'Quattroporte', NULL),
-  (1059, 67, 'Shamal', NULL),
-  (1060, 67, 'Spyder', NULL),
-  (1061, 67, 'Other', NULL),
-  (1062, 68, '57', NULL),
-  (1063, 68, '62', NULL),
-  (1064, 68, 'Pullman', NULL),
-  (1065, 68, 'Other', NULL),
-  (1066, 69, '121', NULL),
-  (1067, 69, '2', NULL),
-  (1068, 69, '3', NULL),
-  (1069, 69, '323', NULL),
-  (1070, 69, '5', NULL),
-  (1071, 69, '6', NULL),
-  (1072, 69, '626', NULL),
-  (1073, 69, '929', NULL),
-  (1074, 69, 'Bongo', NULL),
-  (1075, 69, 'B series', NULL),
-  (1076, 69, 'BT-50', NULL),
-  (1077, 69, 'CX-3', NULL),
-  (1078, 69, 'CX-30', NULL),
-  (1079, 69, 'CX-5', NULL),
-  (1080, 69, 'CX-7', NULL),
-  (1081, 69, 'CX-9', NULL),
-  (1082, 69, 'Demio', NULL),
-  (1083, 69, 'E series', NULL),
-  (1084, 69, 'Millenia', NULL),
-  (1085, 69, 'MPV', NULL),
-  (1086, 69, 'MX-3', NULL),
-  (1087, 69, 'MX-5', NULL),
-  (1088, 69, 'MX-6', NULL),
-  (1089, 69, 'Premacy', NULL),
-  (1090, 69, 'Protege', NULL),
-  (1091, 69, 'RX-6', NULL),
-  (1092, 69, 'RX-7', NULL),
-  (1093, 69, 'RX-8', NULL),
-  (1094, 69, 'Tribute', NULL),
-  (1095, 69, 'Xedos', NULL),
-  (1096, 69, 'Other', NULL),
-  (1097, 70, '540C', NULL),
-  (1098, 70, '570GT', NULL),
-  (1099, 70, '570S', NULL),
-  (1100, 70, '650S', NULL),
-  (1101, 70, '650S Coupé', NULL),
-  (1102, 70, '650S Spider', NULL),
-  (1103, 70, '675LT', NULL),
-  (1104, 70, '675LT Spider', NULL),
-  (1105, 70, '720S', NULL),
-  (1106, 70, 'GT', NULL),
-  (1107, 70, 'MP4-12C', NULL),
-  (1108, 70, 'P1', NULL),
-  (1109, 70, 'Other', NULL),
-  (1110, 71, '190', NULL),
-  (1111, 71, '200', NULL),
-  (1112, 71, '220', NULL),
-  (1113, 71, '230', NULL),
-  (1114, 71, '240', NULL),
-  (1115, 71, '250', NULL),
-  (1116, 71, '260', NULL),
-  (1117, 71, '270', NULL),
-  (1118, 71, '280', NULL),
-  (1119, 71, '290', NULL),
-  (1120, 71, '300', NULL),
-  (1121, 71, '320', NULL),
-  (1122, 71, '350', NULL),
-  (1123, 71, '380', NULL),
-  (1124, 71, '400', NULL),
-  (1125, 71, '416', NULL),
-  (1126, 71, '420', NULL),
-  (1127, 71, '450', NULL),
-  (1128, 71, '500', NULL),
-  (1129, 71, '560', NULL),
-  (1130, 71, '600', NULL),
-  (1131, 71, 'A 140', 'A-Class'),
-  (1132, 71, 'A 150', 'A-Class'),
-  (1133, 71, 'A 160', 'A-Class'),
-  (1134, 71, 'A 170', 'A-Class'),
-  (1135, 71, 'A 180', 'A-Class'),
-  (1136, 71, 'A 190', 'A-Class'),
-  (1137, 71, 'A 200', 'A-Class'),
-  (1138, 71, 'A 210', 'A-Class'),
-  (1139, 71, 'A 220', 'A-Class'),
-  (1140, 71, 'A 250', 'A-Class'),
-  (1141, 71, 'A 35 AMG', 'A-Class'),
-  (1142, 71, 'A 45 AMG', 'A-Class'),
-  (1143, 71, 'B 150', 'B-Class'),
-  (1144, 71, 'B 160', 'B-Class'),
-  (1145, 71, 'B 170', 'B-Class'),
-  (1146, 71, 'B 180', 'B-Class'),
-  (1147, 71, 'B 200', 'B-Class'),
-  (1148, 71, 'B 220', 'B-Class'),
-  (1149, 71, 'B 250', 'B-Class'),
-  (1150, 71, 'B Electric Drive', 'B-Class'),
-  (1151, 71, 'C 160', 'C-Class'),
-  (1152, 71, 'C 180', 'C-Class'),
-  (1153, 71, 'C 200', 'C-Class'),
-  (1154, 71, 'C 220', 'C-Class'),
-  (1155, 71, 'C 230', 'C-Class'),
-  (1156, 71, 'C 240', 'C-Class'),
-  (1157, 71, 'C 250', 'C-Class'),
-  (1158, 71, 'C 270', 'C-Class'),
-  (1159, 71, 'C 280', 'C-Class'),
-  (1160, 71, 'C 300', 'C-Class'),
-  (1161, 71, 'C 30 AMG', 'C-Class'),
-  (1162, 71, 'C 320', 'C-Class'),
-  (1163, 71, 'C 32 AMG', 'C-Class'),
-  (1164, 71, 'C 350', 'C-Class'),
-  (1165, 71, 'C 36 AMG', 'C-Class'),
-  (1166, 71, 'C 400', 'C-Class'),
-  (1167, 71, 'C 43 AMG', 'C-Class'),
-  (1168, 71, 'C 450 AMG', 'C-Class'),
-  (1169, 71, 'C 55 AMG', 'C-Class'),
-  (1170, 71, 'C 63 AMG', 'C-Class'),
-  (1171, 71, 'CE 200', 'CE-Class'),
-  (1172, 71, 'CE 220', 'CE-Class'),
-  (1173, 71, 'CE 230', 'CE-Class'),
-  (1174, 71, 'CE 280', 'CE-Class'),
-  (1175, 71, 'CE 300', 'CE-Class'),
-  (1176, 71, 'CE 320', 'CE-Class'),
-  (1177, 71, 'Citan', NULL),
-  (1178, 71, 'CLA 180', 'CLA-Class'),
-  (1179, 71, 'CLA 180 Shooting Brake', 'CLA-Class'),
-  (1180, 71, 'CLA 200', 'CLA-Class'),
-  (1181, 71, 'CLA 200 Shooting Brake', 'CLA-Class'),
-  (1182, 71, 'CLA 220', 'CLA-Class'),
-  (1183, 71, 'CLA 220 Shooting Brake', 'CLA-Class'),
-  (1184, 71, 'CLA 250', 'CLA-Class'),
-  (1185, 71, 'CLA 250 Shooting Brake', 'CLA-Class'),
-  (1186, 71, 'CLA 35 AMG', 'CLA-Class'),
-  (1187, 71, 'CLA 45 AMG', 'CLA-Class'),
-  (1188, 71, 'CLA 45 AMG Shooting Brake', 'CLA-Class'),
-  (1189, 71, 'CLA Shooting Brake', 'CLA-Class'),
-  (1190, 71, 'CLC 160', 'CLC-Class'),
-  (1191, 71, 'CLC 180', 'CLC-Class'),
-  (1192, 71, 'CLC 200', 'CLC-Class'),
-  (1193, 71, 'CLC 220', 'CLC-Class'),
-  (1194, 71, 'CLC 230', 'CLC-Class'),
-  (1195, 71, 'CLC 250', 'CLC-Class'),
-  (1196, 71, 'CLC 350', 'CLC-Class'),
-  (1197, 71, 'CL 160', 'CL-Class'),
-  (1198, 71, 'CL 180', 'CL-Class'),
-  (1199, 71, 'CL 200', 'CL-Class'),
-  (1200, 71, 'CL 220', 'CL-Class'),
-  (1201, 71, 'CL 230', 'CL-Class'),
-  (1202, 71, 'CL 320', 'CL-Class'),
-  (1203, 71, 'CL 420', 'CL-Class'),
-  (1204, 71, 'CL 500', 'CL-Class'),
-  (1205, 71, 'CL 55 AMG', 'CL-Class'),
-  (1206, 71, 'CL 600', 'CL-Class'),
-  (1207, 71, 'CL 63 AMG', 'CL-Class'),
-  (1208, 71, 'CL 65 AMG', 'CL-Class'),
-  (1209, 71, 'CLK 200', 'CLK-Class'),
-  (1210, 71, 'CLK 220', 'CLK-Class'),
-  (1211, 71, 'CLK 230', 'CLK-Class'),
-  (1212, 71, 'CLK 240', 'CLK-Class'),
-  (1213, 71, 'CLK 270', 'CLK-Class'),
-  (1214, 71, 'CLK 280', 'CLK-Class'),
-  (1215, 71, 'CLK 320', 'CLK-Class'),
-  (1216, 71, 'CLK 350', 'CLK-Class'),
-  (1217, 71, 'CLK 430', 'CLK-Class'),
-  (1218, 71, 'CLK 500', 'CLK-Class'),
-  (1219, 71, 'CLK 55 AMG', 'CLK-Class'),
-  (1220, 71, 'CLK 63 AMG', 'CLK-Class'),
-  (1221, 71, 'CLS 220', 'CLS-Class'),
-  (1222, 71, 'CLS 220 Shooting Brake', 'CLS-Class'),
-  (1223, 71, 'CLS 250', 'CLS-Class'),
-  (1224, 71, 'CLS 250 Shooting Brake', 'CLS-Class'),
-  (1225, 71, 'CLS 280', 'CLS-Class'),
-  (1226, 71, 'CLS 300', 'CLS-Class'),
-  (1227, 71, 'CLS 320', 'CLS-Class'),
-  (1228, 71, 'CLS 350', 'CLS-Class'),
-  (1229, 71, 'CLS 350 Shooting Brake', 'CLS-Class'),
-  (1230, 71, 'CLS 400', 'CLS-Class'),
-  (1231, 71, 'CLS 400 Shooting Brake', 'CLS-Class'),
-  (1232, 71, 'CLS 450', 'CLS-Class'),
-  (1233, 71, 'CLS 500', 'CLS-Class'),
-  (1234, 71, 'CLS 500 Shooting Brake', 'CLS-Class'),
-  (1235, 71, 'CLS 53 AMG', 'CLS-Class'),
-  (1236, 71, 'CLS 55 AMG', 'CLS-Class'),
-  (1237, 71, 'CLS 63 AMG', 'CLS-Class'),
-  (1238, 71, 'CLS 63 AMG Shooting Brake', 'CLS-Class'),
-  (1239, 71, 'CLS Shooting Brake', 'CLS-Class'),
-  (1240, 71, 'E 200', 'E-Class'),
-  (1241, 71, 'E 220', 'E-Class'),
-  (1242, 71, 'E 230', 'E-Class'),
-  (1243, 71, 'E 240', 'E-Class'),
-  (1244, 71, 'E 250', 'E-Class'),
-  (1245, 71, 'E 260', 'E-Class'),
-  (1246, 71, 'E 270', 'E-Class'),
-  (1247, 71, 'E 280', 'E-Class'),
-  (1248, 71, 'E 290', 'E-Class'),
-  (1249, 71, 'E 300', 'E-Class'),
-  (1250, 71, 'E 320', 'E-Class'),
-  (1251, 71, 'E 350', 'E-Class'),
-  (1252, 71, 'E 36 AMG', 'E-Class'),
-  (1253, 71, 'E 400', 'E-Class'),
-  (1254, 71, 'E 420', 'E-Class'),
-  (1255, 71, 'E 430', 'E-Class'),
-  (1256, 71, 'E 43 AMG', 'E-Class'),
-  (1257, 71, 'E 450', 'E-Class'),
-  (1258, 71, 'E 50', 'E-Class'),
-  (1259, 71, 'E 500', 'E-Class'),
-  (1260, 71, 'E 53 AMG', 'E-Class'),
-  (1261, 71, 'E 55 AMG', 'E-Class'),
-  (1262, 71, 'E 60 AMG', 'E-Class'),
-  (1263, 71, 'E 63 AMG', 'E-Class'),
-  (1264, 71, 'EQC', NULL),
-  (1265, 71, 'G 230', 'G-Class'),
-  (1266, 71, 'G 240', 'G-Class'),
-  (1267, 71, 'G 250', 'G-Class'),
-  (1268, 71, 'G 270', 'G-Class'),
-  (1269, 71, 'G 280', 'G-Class'),
-  (1270, 71, 'G 290', 'G-Class'),
-  (1271, 71, 'G 300', 'G-Class'),
-  (1272, 71, 'G 320', 'G-Class'),
-  (1273, 71, 'G 350', 'G-Class'),
-  (1274, 71, 'G 400', 'G-Class'),
-  (1275, 71, 'G 500', 'G-Class'),
-  (1276, 71, 'G 55 AMG', 'G-Class'),
-  (1277, 71, 'G 63 AMG', 'G-Class'),
-  (1278, 71, 'G 65 AMG', 'G-Class'),
-  (1279, 71, 'GLA 180', 'GLA-Class'),
-  (1280, 71, 'GLA 200', 'GLA-Class'),
-  (1281, 71, 'GLA 220', 'GLA-Class'),
-  (1282, 71, 'GLA 250', 'GLA-Class'),
-  (1283, 71, 'GLA 45 AMG', 'GLA-Class'),
-  (1284, 71, 'GLB 180', 'GLB-Class'),
-  (1285, 71, 'GLB 200', 'GLB-Class'),
-  (1286, 71, 'GLB 220', 'GLB-Class'),
-  (1287, 71, 'GLB 250', 'GLB-Class'),
-  (1288, 71, 'GLC 200', 'GLC-Class'),
-  (1289, 71, 'GLC 220', 'GLC-Class'),
-  (1290, 71, 'GLC 250', 'GLC-Class'),
-  (1291, 71, 'GLC 300', 'GLC-Class'),
-  (1292, 71, 'GLC 350', 'GLC-Class'),
-  (1293, 71, 'GLC 400', 'GLC-Class'),
-  (1294, 71, 'GLC 43 AMG', 'GLC-Class'),
-  (1295, 71, 'GLC 63 AMG', 'GLC-Class'),
-  (1296, 71, 'GL 320', 'GL-Class'),
-  (1297, 71, 'GL 350', 'GL-Class'),
-  (1298, 71, 'GL 400', 'GL-Class'),
-  (1299, 71, 'GL 420', 'GL-Class'),
-  (1300, 71, 'GL 450', 'GL-Class'),
-  (1301, 71, 'GL 500', 'GL-Class'),
-  (1302, 71, 'GL 55 AMG', 'GL-Class'),
-  (1303, 71, 'GL 63 AMG', 'GL-Class'),
-  (1304, 71, 'GLE 250', 'GLE-Class'),
-  (1305, 71, 'GLE 300', 'GLE-Class'),
-  (1306, 71, 'GLE 350', 'GLE-Class'),
-  (1307, 71, 'GLE 400', 'GLE-Class'),
-  (1308, 71, 'GLE 43 AMG', 'GLE-Class'),
-  (1309, 71, 'GLE 450', 'GLE-Class'),
-  (1310, 71, 'GLE 500', 'GLE-Class'),
-  (1311, 71, 'GLE 53 AMG', 'GLE-Class'),
-  (1312, 71, 'GLE 63 AMG', 'GLE-Class'),
-  (1313, 71, 'GLK 200', 'GLK-Class'),
-  (1314, 71, 'GLK 220', 'GLK-Class'),
-  (1315, 71, 'GLK 250', 'GLK-Class'),
-  (1316, 71, 'GLK 280', 'GLK-Class'),
-  (1317, 71, 'GLK 300', 'GLK-Class'),
-  (1318, 71, 'GLK 320', 'GLK-Class'),
-  (1319, 71, 'GLK 350', 'GLK-Class'),
-  (1320, 71, 'GLS 350', 'GLS-Class'),
-  (1321, 71, 'GLS 400', 'GLS-Class'),
-  (1322, 71, 'GLS 500', 'GLS-Class'),
-  (1323, 71, 'GLS 63', 'GLS-Class'),
-  (1324, 71, 'AMG GT', 'GT-Class'),
-  (1325, 71, 'AMG GT C', 'GT-Class'),
-  (1326, 71, 'AMG GT R', 'GT-Class'),
-  (1327, 71, 'AMG GT S', 'GT-Class'),
-  (1328, 71, 'MB 100', NULL),
-  (1329, 71, 'ML 230', 'ML-Class'),
-  (1330, 71, 'ML 250', 'ML-Class'),
-  (1331, 71, 'ML 270', 'ML-Class'),
-  (1332, 71, 'ML 280', 'ML-Class'),
-  (1333, 71, 'ML 300', 'ML-Class'),
-  (1334, 71, 'ML 320', 'ML-Class'),
-  (1335, 71, 'ML 350', 'ML-Class'),
-  (1336, 71, 'ML 400', 'ML-Class'),
-  (1337, 71, 'ML 420', 'ML-Class'),
-  (1338, 71, 'ML 430', 'ML-Class'),
-  (1339, 71, 'ML 450', 'ML-Class'),
-  (1340, 71, 'ML 500', 'ML-Class'),
-  (1341, 71, 'ML 55 AMG', 'ML-Class'),
-  (1342, 71, 'ML 63 AMG', 'ML-Class'),
-  (1343, 71, 'R 280', 'R-Class'),
-  (1344, 71, 'R 300', 'R-Class'),
-  (1345, 71, 'R 320', 'R-Class'),
-  (1346, 71, 'R 350', 'R-Class'),
-  (1347, 71, 'R 500', 'R-Class'),
-  (1348, 71, 'R 63 AMG', 'R-Class'),
-  (1349, 71, 'S 250', 'S-Class'),
-  (1350, 71, 'S 260', 'S-Class'),
-  (1351, 71, 'S 280', 'S-Class'),
-  (1352, 71, 'S 300', 'S-Class'),
-  (1353, 71, 'S 320', 'S-Class'),
-  (1354, 71, 'S 350', 'S-Class'),
-  (1355, 71, 'S 400', 'S-Class'),
-  (1356, 71, 'S 420', 'S-Class'),
-  (1357, 71, 'S 430', 'S-Class'),
-  (1358, 71, 'S 450', 'S-Class'),
-  (1359, 71, 'S 500', 'S-Class'),
-  (1360, 71, 'S 55', 'S-Class'),
-  (1361, 71, 'S 550', 'S-Class'),
-  (1362, 71, 'S 560', 'S-Class'),
-  (1363, 71, 'S 600', 'S-Class'),
-  (1364, 71, 'S 63 AMG', 'S-Class'),
-  (1365, 71, 'S 650', 'S-Class'),
-  (1366, 71, 'S 65 AMG', 'S-Class'),
-  (1367, 71, 'SLC 180', 'SLC-Class'),
-  (1368, 71, 'SLC 200', 'SLC-Class'),
-  (1369, 71, 'SLC 250', 'SLC-Class'),
-  (1370, 71, 'SLC 280', 'SLC-Class'),
-  (1371, 71, 'SLC 300', 'SLC-Class'),
-  (1372, 71, 'SLC 43 AMG', 'SLC-Class'),
-  (1373, 71, 'SL 280', 'SL-Class'),
-  (1374, 71, 'SL 300', 'SL-Class'),
-  (1375, 71, 'SL 320', 'SL-Class'),
-  (1376, 71, 'SL 350', 'SL-Class'),
-  (1377, 71, 'SL 380', 'SL-Class'),
-  (1378, 71, 'SL 400', 'SL-Class'),
-  (1379, 71, 'SL 420', 'SL-Class'),
-  (1380, 71, 'SL 450', 'SL-Class'),
-  (1381, 71, 'SL 500', 'SL-Class'),
-  (1382, 71, 'SL 55 AMG', 'SL-Class'),
-  (1383, 71, 'SL 560', 'SL-Class'),
-  (1384, 71, 'SL 600', 'SL-Class'),
-  (1385, 71, 'SL 60 AMG', 'SL-Class'),
-  (1386, 71, 'SL 63 AMG', 'SL-Class'),
-  (1387, 71, 'SL 65 AMG', 'SL-Class'),
-  (1388, 71, 'SL 70 AMG', 'SL-Class'),
-  (1389, 71, 'SL 73 AMG', 'SL-Class'),
-  (1390, 71, 'SLK 200', 'SLK-Class'),
-  (1391, 71, 'SLK 230', 'SLK-Class'),
-  (1392, 71, 'SLK 250', 'SLK-Class'),
-  (1393, 71, 'SLK 280', 'SLK-Class'),
-  (1394, 71, 'SLK 300', 'SLK-Class'),
-  (1395, 71, 'SLK 320', 'SLK-Class'),
-  (1396, 71, 'SLK 32 AMG', 'SLK-Class'),
-  (1397, 71, 'SLK 350', 'SLK-Class'),
-  (1398, 71, 'SLK 55 AMG', 'SLK-Class'),
-  (1399, 71, 'SLR', NULL),
-  (1400, 71, 'SLS AMG', NULL),
-  (1401, 71, 'Sprinter', NULL),
-  (1402, 71, 'Vaneo', NULL),
-  (1403, 71, 'Vario', NULL),
-  (1404, 71, 'V 200', 'V-Class'),
-  (1405, 71, 'V 220', 'V-Class'),
-  (1406, 71, 'V 230', 'V-Class'),
-  (1407, 71, 'V 250', 'V-Class'),
-  (1408, 71, 'V 280', 'V-Class'),
-  (1409, 71, 'V 300', 'V-Class'),
-  (1410, 71, 'Viano', NULL),
-  (1411, 71, 'Vito', NULL),
-  (1412, 71, 'X 220', 'X-Class'),
-  (1413, 71, 'X 250', 'X-Class'),
-  (1414, 71, 'X 350', 'X-Class'),
-  (1415, 71, 'Other', NULL),
-  (1416, 72, 'MGA', NULL),
-  (1417, 72, 'MGB', NULL),
-  (1418, 72, 'MGF', NULL),
-  (1419, 72, 'Midget', NULL),
-  (1420, 72, 'Montego', NULL),
-  (1421, 72, 'TD', NULL),
-  (1422, 72, 'TF', NULL),
-  (1423, 72, 'ZR', NULL),
-  (1424, 72, 'ZS', NULL),
-  (1425, 72, 'ZT', NULL),
-  (1426, 72, 'Other', NULL),
-  (1427, 73, 'DUÈ', NULL),
-  (1428, 73, 'Flex', NULL),
-  (1429, 73, 'M.Go', NULL),
-  (1430, 73, 'M-8', NULL),
-  (1431, 73, 'MC1', NULL),
-  (1432, 73, 'MC2', NULL),
-  (1433, 73, 'Virgo', NULL),
-  (1434, 73, 'Other', NULL),
-  (1435, 74, 'Cooper Cabrio', 'Cabrio Series'),
-  (1436, 74, 'Cooper D Cabrio', 'Cabrio Series'),
-  (1437, 74, 'Cooper S Cabrio', 'Cabrio Series'),
-  (1438, 74, 'Cooper SD Cabrio', 'Cabrio Series'),
-  (1439, 74, 'John Cooper Works Cabrio', 'Cabrio Series'),
-  (1440, 74, 'One Cabrio', 'Cabrio Series'),
-  (1441, 74, 'Cooper Clubman', 'Clubman Series'),
-  (1442, 74, 'Cooper D Clubman', 'Clubman Series'),
-  (1443, 74, 'Cooper S Clubman', 'Clubman Series'),
-  (1444, 74, 'Cooper SD Clubman', 'Clubman Series'),
-  (1445, 74, 'John Cooper Works Clubman', 'Clubman Series'),
-  (1446, 74, 'One Clubman', 'Clubman Series'),
-  (1447, 74, 'One D Clubman', 'Clubman Series'),
-  (1448, 74, 'Clubvan', NULL),
-  (1449, 74, 'Cooper Countryman', 'Countryman Series'),
-  (1450, 74, 'Cooper D Countryman', 'Countryman Series'),
-  (1451, 74, 'Cooper S Countryman', 'Countryman Series'),
-  (1452, 74, 'Cooper SD Countryman', 'Countryman Series'),
-  (1453, 74, 'John Cooper Works Countryman', 'Countryman Series'),
-  (1454, 74, 'One Countryman', 'Countryman Series'),
-  (1455, 74, 'One D Countryman', 'Countryman Series'),
-  (1456, 74, 'Cooper Coupé', 'Coupe Series'),
-  (1457, 74, 'Cooper S Coupé', 'Coupe Series'),
-  (1458, 74, 'Cooper SD Coupé', 'Coupe Series'),
-  (1459, 74, 'John Cooper Works Coupé', 'Coupe Series'),
-  (1460, 74, '1000', 'MINI'),
-  (1461, 74, '1300', 'MINI'),
-  (1462, 74, 'Cooper', 'MINI'),
-  (1463, 74, 'Cooper D', 'MINI'),
-  (1464, 74, 'Cooper S', 'MINI'),
-  (1465, 74, 'Cooper SD', 'MINI'),
-  (1466, 74, 'John Cooper Works', 'MINI'),
-  (1467, 74, 'ONE', 'MINI'),
-  (1468, 74, 'One D', 'MINI'),
-  (1469, 74, 'One First', 'MINI'),
-  (1470, 74, 'Cooper D Paceman', 'Paceman Series'),
-  (1471, 74, 'Cooper Paceman', 'Paceman Series'),
-  (1472, 74, 'Cooper SD Paceman', 'Paceman Series'),
-  (1473, 74, 'Cooper S Paceman', 'Paceman Series'),
-  (1474, 74, 'John Cooper Works Paceman', 'Paceman Series'),
-  (1475, 74, 'Cooper Roadster', 'Roadster Series'),
-  (1476, 74, 'Cooper SD Roadster', 'Roadster Series'),
-  (1477, 74, 'Cooper S Roadster', 'Roadster Series'),
-  (1478, 74, 'John Cooper Works Roadster', 'Roadster Series'),
-  (1479, 74, 'Other', NULL),
-  (1480, 75, '3000 GT', NULL),
-  (1481, 75, 'ASX', NULL),
-  (1482, 75, 'Canter', NULL),
-  (1483, 75, 'Carisma', NULL),
-  (1484, 75, 'Colt', NULL),
-  (1485, 75, 'Cordia', NULL),
-  (1486, 75, 'Cosmos', NULL),
-  (1487, 75, 'Diamante', NULL),
-  (1488, 75, 'Eclipse', NULL),
-  (1489, 75, 'Eclipse Cross', NULL),
-  (1490, 75, 'Galant', NULL),
-  (1491, 75, 'Galloper', NULL),
-  (1492, 75, 'Grandis', NULL),
-  (1493, 75, 'i-MiEV', NULL),
-  (1494, 75, 'L200', NULL),
-  (1495, 75, 'L300', NULL),
-  (1496, 75, 'L400', NULL),
-  (1497, 75, 'Lancer', NULL),
-  (1498, 75, 'Mirage', NULL),
-  (1499, 75, 'Montero', NULL),
-  (1500, 75, 'Outlander', NULL),
-  (1501, 75, 'Pajero', NULL),
-  (1502, 75, 'Pajero Pinin', NULL),
-  (1503, 75, 'Pick-up', NULL),
-  (1504, 75, 'Plug-in Hybrid Outlander', NULL),
-  (1505, 75, 'Santamo', NULL),
-  (1506, 75, 'Sapporo', NULL),
-  (1507, 75, 'Sigma', NULL),
-  (1508, 75, 'Space Gear', NULL),
-  (1509, 75, 'Space Runner', NULL),
-  (1510, 75, 'Space Star', NULL),
-  (1511, 75, 'Space Wagon', NULL),
-  (1512, 75, 'Starion', NULL),
-  (1513, 75, 'Tredia', NULL),
-  (1514, 75, 'Other', NULL),
-  (1515, 76, '3 Wheeler', NULL),
-  (1516, 76, '4/4', NULL),
-  (1517, 76, 'Aero 8', NULL),
-  (1518, 76, 'Plus 4', NULL),
-  (1519, 76, 'Plus 8', NULL),
-  (1520, 76, 'Roadster', NULL),
-  (1521, 76, 'Other', NULL),
-  (1522, 77, '100 NX', NULL),
-  (1523, 77, '200 SX', NULL),
-  (1524, 77, '240 SX', NULL),
-  (1525, 77, '280 ZX', NULL),
-  (1526, 77, '300 ZX', NULL),
-  (1527, 77, '350Z', NULL),
-  (1528, 77, '370Z', NULL),
-  (1529, 77, 'Almera', NULL),
-  (1530, 77, 'Almera Tino', NULL),
-  (1531, 77, 'Altima', NULL),
-  (1532, 77, 'Armada', NULL),
-  (1533, 77, 'Bluebird', NULL),
-  (1534, 77, 'Cabstar', NULL),
-  (1535, 77, 'Cargo', NULL),
-  (1536, 77, 'Cherry', NULL),
-  (1537, 77, 'Cube', NULL),
-  (1538, 77, 'e-NV200', NULL),
-  (1539, 77, 'Evalia', NULL),
-  (1540, 77, 'Frontier', NULL),
-  (1541, 77, 'GT-R', NULL),
-  (1542, 77, 'Interstar', NULL),
-  (1543, 77, 'Juke', NULL),
-  (1544, 77, 'King Cab', NULL),
-  (1545, 77, 'Kubistar', NULL),
-  (1546, 77, 'Laurel', NULL),
-  (1547, 77, 'Leaf', NULL),
-  (1548, 77, 'Maxima', NULL),
-  (1549, 77, 'Micra', NULL),
-  (1550, 77, 'Murano', NULL),
-  (1551, 77, 'Navara', NULL),
-  (1552, 77, 'Note', NULL),
-  (1553, 77, 'NP 300', NULL),
-  (1554, 77, 'NV200', NULL),
-  (1555, 77, 'NV250', NULL),
-  (1556, 77, 'NV300', NULL),
-  (1557, 77, 'NV400', NULL),
-  (1558, 77, 'Pathfinder', NULL),
-  (1559, 77, 'Patrol', NULL),
-  (1560, 77, 'PickUp', NULL),
-  (1561, 77, 'Pixo', NULL),
-  (1562, 77, 'Prairie', NULL),
-  (1563, 77, 'Primastar', NULL),
-  (1564, 77, 'Primera', NULL),
-  (1565, 77, 'Pulsar', NULL),
-  (1566, 77, 'Qashqai', NULL),
-  (1567, 77, 'Qashqai+2', NULL),
-  (1568, 77, 'Quest', NULL),
-  (1569, 77, 'Sentra', NULL),
-  (1570, 77, 'Serena', NULL),
-  (1571, 77, 'Silvia', NULL),
-  (1572, 77, 'Skyline', NULL),
-  (1573, 77, 'Sunny', NULL),
-  (1574, 77, 'Terrano', NULL),
-  (1575, 77, 'Tiida', NULL),
-  (1576, 77, 'Titan', NULL),
-  (1577, 77, 'Trade', NULL),
-  (1578, 77, 'Urvan', NULL),
-  (1579, 77, 'Vanette', NULL),
-  (1580, 77, 'X-Trail', NULL),
-  (1581, 77, 'Other', NULL),
-  (1582, 78, 'Other', NULL),
-  (1583, 79, 'Bravada', NULL),
-  (1584, 79, 'Custom Cruiser', NULL),
-  (1585, 79, 'Cutlass', NULL),
-  (1586, 79, 'Delta 88', NULL),
-  (1587, 79, 'Silhouette', NULL),
-  (1588, 79, 'Supreme', NULL),
-  (1589, 79, 'Toronado', NULL),
-  (1590, 79, 'Other', NULL),
-  (1591, 80, 'Adam', NULL),
-  (1592, 80, 'Agila', NULL),
-  (1593, 80, 'Ampera', NULL),
-  (1594, 80, 'Ampera-e', NULL),
-  (1595, 80, 'Antara', NULL),
-  (1596, 80, 'Arena', NULL),
-  (1597, 80, 'Ascona', NULL),
-  (1598, 80, 'Astra', NULL),
-  (1599, 80, 'Calibra', NULL),
-  (1600, 80, 'Campo', NULL),
-  (1601, 80, 'Cascada', NULL),
-  (1602, 80, 'Cavalier', NULL),
-  (1603, 80, 'Combo', NULL),
-  (1604, 80, 'Commodore', NULL),
-  (1605, 80, 'Corsa', NULL),
-  (1606, 80, 'Crossland X', NULL),
-  (1607, 80, 'Diplomat', NULL),
-  (1608, 80, 'Frontera', NULL),
-  (1609, 80, 'Grandland X', NULL),
-  (1610, 80, 'GT', NULL),
-  (1611, 80, 'Insignia', NULL),
-  (1612, 80, 'Insignia CT', NULL),
-  (1613, 80, 'Kadett', NULL),
-  (1614, 80, 'Karl', NULL),
-  (1615, 80, 'Manta', NULL),
-  (1616, 80, 'Meriva', NULL),
-  (1617, 80, 'Mokka', NULL),
-  (1618, 80, 'Mokka X', NULL),
-  (1619, 80, 'Monterey', NULL),
-  (1620, 80, 'Monza', NULL),
-  (1621, 80, 'Movano', NULL),
-  (1622, 80, 'Nova', NULL),
-  (1623, 80, 'Omega', NULL),
-  (1624, 80, 'Pick Up Sportscap', NULL),
-  (1625, 80, 'Rekord', NULL),
-  (1626, 80, 'Senator', NULL),
-  (1627, 80, 'Signum', NULL),
-  (1628, 80, 'Sintra', NULL),
-  (1629, 80, 'Speedster', NULL),
-  (1630, 80, 'Tigra', NULL),
-  (1631, 80, 'Vectra', NULL),
-  (1632, 80, 'Vivaro', NULL),
-  (1633, 80, 'Zafira', NULL),
-  (1634, 80, 'Zafira Life', NULL),
-  (1635, 80, 'Zafira Tourer', NULL),
-  (1636, 80, 'Other', NULL),
-  (1637, 81, 'Huayra', NULL),
-  (1638, 81, 'Zonda', NULL),
-  (1639, 81, 'Other', NULL),
-  (1640, 82, '1007', NULL),
-  (1641, 82, '104', NULL),
-  (1642, 82, '106', NULL),
-  (1643, 82, '107', NULL),
-  (1644, 82, '108', NULL),
-  (1645, 82, '2008', NULL),
-  (1646, 82, '204', NULL),
-  (1647, 82, '205', NULL),
-  (1648, 82, '206', NULL),
-  (1649, 82, '207', NULL),
-  (1650, 82, '208', NULL),
-  (1651, 82, '3008', NULL),
-  (1652, 82, '301', NULL),
-  (1653, 82, '304', NULL),
-  (1654, 82, '305', NULL),
-  (1655, 82, '306', NULL),
-  (1656, 82, '307', NULL),
-  (1657, 82, '308', NULL),
-  (1658, 82, '309', NULL),
-  (1659, 82, '4007', NULL),
-  (1660, 82, '4008', NULL),
-  (1661, 82, '404', NULL),
-  (1662, 82, '405', NULL),
-  (1663, 82, '406', NULL),
-  (1664, 82, '407', NULL),
-  (1665, 82, '5008', NULL),
-  (1666, 82, '504', NULL),
-  (1667, 82, '505', NULL),
-  (1668, 82, '508', NULL),
-  (1669, 82, '604', NULL),
-  (1670, 82, '605', NULL),
-  (1671, 82, '607', NULL),
-  (1672, 82, '806', NULL),
-  (1673, 82, '807', NULL),
-  (1674, 82, 'Bipper', NULL),
-  (1675, 82, 'Bipper Tepee', NULL),
-  (1676, 82, 'Boxer', NULL),
-  (1677, 82, 'Expert', NULL),
-  (1678, 82, 'Expert Tepee', NULL),
-  (1679, 82, 'iOn', NULL),
-  (1680, 82, 'J5', NULL),
-  (1681, 82, 'Partner', NULL),
-  (1682, 82, 'Partner Tepee', NULL),
-  (1683, 82, 'RCZ', NULL),
-  (1684, 82, 'Rifter', NULL),
-  (1685, 82, 'TePee', NULL),
-  (1686, 82, 'Traveller', NULL),
-  (1687, 82, 'Other', NULL),
-  (1688, 83, 'APE', NULL),
-  (1689, 83, 'APE TM', NULL),
-  (1690, 83, 'Porter', NULL),
-  (1691, 83, 'Other', NULL),
-  (1692, 84, 'Prowler', NULL),
-  (1693, 84, 'Other', NULL),
-  (1694, 85, '1', NULL),
-  (1695, 85, 'Other', NULL),
-  (1696, 86, '6000', NULL),
-  (1697, 86, 'Bonneville', NULL),
-  (1698, 86, 'Fiero', NULL),
-  (1699, 86, 'Firebird', NULL),
-  (1700, 86, 'G6', NULL),
-  (1701, 86, 'Grand-Am', NULL),
-  (1702, 86, 'Grand-Prix', NULL),
-  (1703, 86, 'GTO', NULL),
-  (1704, 86, 'Montana', NULL),
-  (1705, 86, 'Solstice', NULL),
-  (1706, 86, 'Sunbird', NULL),
-  (1707, 86, 'Sunfire', NULL),
-  (1708, 86, 'Targa', NULL),
-  (1709, 86, 'Trans Am', NULL),
-  (1710, 86, 'Trans Sport', NULL),
-  (1711, 86, 'Vibe', NULL),
-  (1712, 86, 'Other', NULL),
-  (1713, 87, '356', NULL),
-  (1714, 87, '912', NULL),
-  (1715, 87, '914', NULL),
-  (1716, 87, '918', NULL),
-  (1717, 87, '924', NULL),
-  (1718, 87, '928', NULL),
-  (1719, 87, '944', NULL),
-  (1720, 87, '959', NULL),
-  (1721, 87, '962', NULL),
-  (1722, 87, '968', NULL),
-  (1723, 87, 'Boxster', NULL),
-  (1724, 87, 'Carrera GT', NULL),
-  (1725, 87, 'Cayenne', NULL),
-  (1726, 87, 'Cayman', NULL),
-  (1727, 87, 'Macan', NULL),
-  (1728, 87, 'Panamera', NULL),
-  (1729, 87, '911', 'Series 911'),
-  (1730, 87, '930', 'Series 911'),
-  (1731, 87, '964', 'Series 911'),
-  (1732, 87, '991', 'Series 911'),
-  (1733, 87, '992', 'Series 911'),
-  (1734, 87, '993', 'Series 911'),
-  (1735, 87, '996', 'Series 911'),
-  (1736, 87, '997', 'Series 911'),
-  (1737, 87, 'Taycan', NULL),
-  (1738, 87, 'Other', NULL),
-  (1739, 88, '300 Serie', NULL),
-  (1740, 88, '400 Serie', NULL),
-  (1741, 88, 'Other', NULL),
-  (1742, 89, 'Alaskan', NULL),
-  (1743, 89, 'Alpine A110', NULL),
-  (1744, 89, 'Alpine A310', NULL),
-  (1745, 89, 'Alpine V6', NULL),
-  (1746, 89, 'Avantime', NULL),
-  (1747, 89, 'Captur', NULL),
-  (1748, 89, 'Clio', NULL),
-  (1749, 89, 'Coupe', NULL),
-  (1750, 89, 'Espace', NULL),
-  (1751, 89, 'Express', NULL),
-  (1752, 89, 'Fluence', NULL),
-  (1753, 89, 'Fuego', NULL),
-  (1754, 89, 'Grand Espace', NULL),
-  (1755, 89, 'Grand Modus', NULL),
-  (1756, 89, 'Grand Scenic', NULL),
-  (1757, 89, 'Kadjar', NULL),
-  (1758, 89, 'Kangoo', NULL),
-  (1759, 89, 'Koleos', NULL),
-  (1760, 89, 'Laguna', NULL),
-  (1761, 89, 'Latitude', NULL),
-  (1762, 89, 'Mascott', NULL),
-  (1763, 89, 'Master', NULL),
-  (1764, 89, 'Megane', NULL),
-  (1765, 89, 'Modus', NULL),
-  (1766, 89, 'P 1400', NULL),
-  (1767, 89, 'R 11', NULL),
-  (1768, 89, 'R 14', NULL),
-  (1769, 89, 'R 18', NULL),
-  (1770, 89, 'R 19', NULL),
-  (1771, 89, 'R 20', NULL),
-  (1772, 89, 'R 21', NULL),
-  (1773, 89, 'R 25', NULL),
-  (1774, 89, 'R 30', NULL),
-  (1775, 89, 'R 4', NULL),
-  (1776, 89, 'R 5', NULL),
-  (1777, 89, 'R 6', NULL),
-  (1778, 89, 'R 9', NULL),
-  (1779, 89, 'Rapid', NULL),
-  (1780, 89, 'Safrane', NULL),
-  (1781, 89, 'Scenic', NULL),
-  (1782, 89, 'Spider', NULL),
-  (1783, 89, 'Talisman', NULL),
-  (1784, 89, 'Trafic', NULL),
-  (1785, 89, 'Twingo', NULL),
-  (1786, 89, 'Twizy', NULL),
-  (1787, 89, 'Vel Satis', NULL),
-  (1788, 89, 'Wind', NULL),
-  (1789, 89, 'ZOE', NULL),
-  (1790, 89, 'Other', NULL),
-  (1791, 90, 'Corniche', NULL),
-  (1792, 90, 'Cullinan', NULL),
-  (1793, 90, 'Dawn', NULL),
-  (1794, 90, 'Flying Spur', NULL),
-  (1795, 90, 'Ghost', NULL),
-  (1796, 90, 'Park Ward', NULL),
-  (1797, 90, 'Phantom', NULL),
-  (1798, 90, 'Silver Cloud', NULL),
-  (1799, 90, 'Silver Dawn', NULL),
-  (1800, 90, 'Silver Seraph', NULL),
-  (1801, 90, 'Silver Shadow', NULL),
-  (1802, 90, 'Silver Spirit', NULL),
-  (1803, 90, 'Silver Spur', NULL),
-  (1804, 90, 'Wraith', NULL),
-  (1805, 90, 'Other', NULL),
-  (1806, 91, '100', NULL),
-  (1807, 91, '111', NULL),
-  (1808, 91, '114', NULL),
-  (1809, 91, '115', NULL),
-  (1810, 91, '200', NULL),
-  (1811, 91, '213', NULL),
-  (1812, 91, '214', NULL),
-  (1813, 91, '216', NULL),
-  (1814, 91, '218', NULL),
-  (1815, 91, '220', NULL),
-  (1816, 91, '25', NULL),
-  (1817, 91, '400', NULL),
-  (1818, 91, '414', NULL),
-  (1819, 91, '416', NULL),
-  (1820, 91, '418', NULL),
-  (1821, 91, '420', NULL),
-  (1822, 91, '45', NULL),
-  (1823, 91, '600', NULL),
-  (1824, 91, '618', NULL),
-  (1825, 91, '620', NULL),
-  (1826, 91, '623', NULL),
-  (1827, 91, '75', NULL),
-  (1828, 91, '800', NULL),
-  (1829, 91, '820', NULL),
-  (1830, 91, '825', NULL),
-  (1831, 91, '827', NULL),
-  (1832, 91, 'City Rover', NULL),
-  (1833, 91, 'Metro', NULL),
-  (1834, 91, 'Montego', NULL),
-  (1835, 91, 'SD', NULL),
-  (1836, 91, 'Streetwise', NULL),
-  (1837, 91, 'Other', NULL),
-  (1838, 92, 'Other', NULL),
-  (1839, 93, '90', NULL),
-  (1840, 93, '900', NULL),
-  (1841, 93, '9000', NULL),
-  (1842, 93, '9-3', NULL),
-  (1843, 93, '9-4X', NULL),
-  (1844, 93, '9-5', NULL),
-  (1845, 93, '96', NULL),
-  (1846, 93, '9-7X', NULL),
-  (1847, 93, '99', NULL),
-  (1848, 93, 'Other', NULL),
-  (1849, 94, 'Other', NULL),
-  (1850, 95, 'Alhambra', NULL),
-  (1851, 95, 'Altea', NULL),
-  (1852, 95, 'Arona', NULL),
-  (1853, 95, 'Arosa', NULL),
-  (1854, 95, 'Ateca', NULL),
-  (1855, 95, 'Cordoba', NULL),
-  (1856, 95, 'Exeo', NULL),
-  (1857, 95, 'Ibiza', NULL),
-  (1858, 95, 'Inca', NULL),
-  (1859, 95, 'Leon', NULL),
-  (1860, 95, 'Malaga', NULL),
-  (1861, 95, 'Marbella', NULL),
-  (1862, 95, 'Mii', NULL),
-  (1863, 95, 'Tarraco', NULL),
-  (1864, 95, 'Terra', NULL),
-  (1865, 95, 'Toledo', NULL),
-  (1866, 95, 'Other', NULL),
-  (1867, 96, '105', NULL),
-  (1868, 96, '120', NULL),
-  (1869, 96, '130', NULL),
-  (1870, 96, '135', NULL),
-  (1871, 96, 'Citigo', NULL),
-  (1872, 96, 'Fabia', NULL),
-  (1873, 96, 'Favorit', NULL),
-  (1874, 96, 'Felicia', NULL),
-  (1875, 96, 'Forman', NULL),
-  (1876, 96, 'Kamiq', NULL),
-  (1877, 96, 'Karoq', NULL),
-  (1878, 96, 'Kodiaq', NULL),
-  (1879, 96, 'Octavia', NULL),
-  (1880, 96, 'Pick-up', NULL),
-  (1881, 96, 'Praktik', NULL),
-  (1882, 96, 'Rapid', NULL),
-  (1883, 96, 'Roomster', NULL),
-  (1884, 96, 'Scala', NULL),
-  (1885, 96, 'Superb', NULL),
-  (1886, 96, 'Yeti', NULL),
-  (1887, 96, 'Other', NULL),
-  (1888, 97, 'Crossblade', NULL),
-  (1889, 97, 'ForFour', NULL),
-  (1890, 97, 'ForTwo', NULL),
-  (1891, 97, 'Roadster', NULL),
-  (1892, 97, 'Other', NULL),
-  (1893, 98, 'Other', NULL),
-  (1894, 99, 'C8', NULL),
-  (1895, 99, 'C8 AILERON', NULL),
-  (1896, 99, 'C8 DOUBLE 12 S', NULL),
-  (1897, 99, 'C8 LAVIOLETTE SWB', NULL),
-  (1898, 99, 'C8 SPYDER SWB', NULL),
-  (1899, 99, 'Other', NULL),
-  (1900, 100, 'Actyon', NULL),
-  (1901, 100, 'Family', NULL),
-  (1902, 100, 'Korando', NULL),
-  (1903, 100, 'Kyron', NULL),
-  (1904, 100, 'MUSSO', NULL),
-  (1905, 100, 'REXTON', NULL),
-  (1906, 100, 'Rodius', NULL),
-  (1907, 100, 'Tivoli', NULL),
-  (1908, 100, 'XLV', NULL),
-  (1909, 100, 'Other', NULL),
-  (1910, 101, 'B9 Tribeca', NULL),
-  (1911, 101, 'Baja', NULL),
-  (1912, 101, 'BRZ', NULL),
-  (1913, 101, 'Forester', NULL),
-  (1914, 101, 'Impreza', NULL),
-  (1915, 101, 'Justy', NULL),
-  (1916, 101, 'Legacy', NULL),
-  (1917, 101, 'Levorg', NULL),
-  (1918, 101, 'Libero', NULL),
-  (1919, 101, 'Outback', NULL),
-  (1920, 101, 'SVX', NULL),
-  (1921, 101, 'Trezia', NULL),
-  (1922, 101, 'Tribeca', NULL),
-  (1923, 101, 'Vivio', NULL),
-  (1924, 101, 'WRX STI', NULL),
-  (1925, 101, 'XT', NULL),
-  (1926, 101, 'XV', NULL),
-  (1927, 101, 'Other', NULL),
-  (1928, 102, 'Alto', NULL),
-  (1929, 102, 'Baleno', NULL),
-  (1930, 102, 'Cappuccino', NULL),
-  (1931, 102, 'Carry', NULL),
-  (1932, 102, 'Celerio', NULL),
-  (1933, 102, 'Grand Vitara', NULL),
-  (1934, 102, 'Ignis', NULL),
-  (1935, 102, 'iK-2', NULL),
-  (1936, 102, 'Jimny', NULL),
-  (1937, 102, 'Kizashi', NULL),
-  (1938, 102, 'Liana', NULL),
-  (1939, 102, 'LJ', NULL),
-  (1940, 102, 'Samurai', NULL),
-  (1941, 102, 'Splash', NULL),
-  (1942, 102, 'Super-Carry', NULL),
-  (1943, 102, 'Swift', NULL),
-  (1944, 102, 'SX4', NULL),
-  (1945, 102, 'SX4 S-Cross', NULL),
-  (1946, 102, 'Vitara', NULL),
-  (1947, 102, 'Wagon R+', NULL),
-  (1948, 102, 'X-90', NULL),
-  (1949, 102, 'Other', NULL),
-  (1950, 103, 'Horizon', NULL),
-  (1951, 103, 'Samba', NULL),
-  (1952, 103, 'Other', NULL),
-  (1953, 104, 'Indica', NULL),
-  (1954, 104, 'Indigo', NULL),
-  (1955, 104, 'Nano', NULL),
-  (1956, 104, 'Safari', NULL),
-  (1957, 104, 'Sumo', NULL),
-  (1958, 104, 'Telcoline', NULL),
-  (1959, 104, 'Telcosport', NULL),
-  (1960, 104, 'Xenon', NULL),
-  (1961, 104, 'Other', NULL),
-  (1962, 105, 'Other', NULL),
-  (1963, 106, 'Model 3', NULL),
-  (1964, 106, 'Model S', NULL),
-  (1965, 106, 'Model X', NULL),
-  (1966, 106, 'Roadster', NULL),
-  (1967, 106, 'Other', NULL),
-  (1968, 107, '4-Runner', NULL),
-  (1969, 107, 'Alphard', NULL),
-  (1970, 107, 'Auris', NULL),
-  (1971, 107, 'Auris Touring Sports', NULL),
-  (1972, 107, 'Avalon', NULL),
-  (1973, 107, 'Avensis', NULL),
-  (1974, 107, 'Avensis Verso', NULL),
-  (1975, 107, 'Aygo', NULL),
-  (1976, 107, 'Camry', NULL),
-  (1977, 107, 'Carina', NULL),
-  (1978, 107, 'Celica', NULL),
-  (1979, 107, 'C-HR', NULL),
-  (1980, 107, 'Corolla', NULL),
-  (1981, 107, 'Corolla Verso', NULL),
-  (1982, 107, 'Cressida', NULL),
-  (1983, 107, 'Crown', NULL),
-  (1984, 107, 'Dyna', NULL),
-  (1985, 107, 'FCV', NULL),
-  (1986, 107, 'FJ', NULL),
-  (1987, 107, 'Fortuner', NULL),
-  (1988, 107, 'GT86', NULL),
-  (1989, 107, 'Hiace', NULL),
-  (1990, 107, 'Highlander', NULL),
-  (1991, 107, 'Hilux', NULL),
-  (1992, 107, 'IQ', NULL),
-  (1993, 107, 'Land Cruiser', NULL),
-  (1994, 107, 'Lite-Ace', NULL),
-  (1995, 107, 'Matrix', NULL),
-  (1996, 107, 'Mirai', NULL),
-  (1997, 107, 'MR 2', NULL),
-  (1998, 107, 'Paseo', NULL),
-  (1999, 107, 'Picnic', NULL);
-INSERT INTO CarModels
-  (Id, MakeId, Name, Series)
-VALUES
-  (2000, 107, 'Previa', NULL),
-  (2001, 107, 'Prius', NULL),
-  (2002, 107, 'Prius+', NULL),
-  (2003, 107, 'Proace (Verso)', NULL),
-  (2004, 107, 'RAV 4', NULL),
-  (2005, 107, 'Sequoia', NULL),
-  (2006, 107, 'Sienna', NULL),
-  (2007, 107, 'Starlet', NULL),
-  (2008, 107, 'Supra', NULL),
-  (2009, 107, 'Tacoma', NULL),
-  (2010, 107, 'Tercel', NULL),
-  (2011, 107, 'Tundra', NULL),
-  (2012, 107, 'Urban Cruiser', NULL),
-  (2013, 107, 'Verso', NULL),
-  (2014, 107, 'Verso-S', NULL),
-  (2015, 107, 'Yaris', NULL),
-  (2016, 107, 'Other', NULL),
-  (2017, 108, '601', NULL),
-  (2018, 108, 'Other', NULL),
-  (2019, 109, 'Dolomite', NULL),
-  (2020, 109, 'Moss', NULL),
-  (2021, 109, 'Spitfire', NULL),
-  (2022, 109, 'TR3', NULL),
-  (2023, 109, 'TR4', NULL),
-  (2024, 109, 'TR5', NULL),
-  (2025, 109, 'TR6', NULL),
-  (2026, 109, 'TR7', NULL),
-  (2027, 109, 'TR8', NULL),
-  (2028, 109, 'Other', NULL),
-  (2029, 110, 'Chimaera', NULL),
-  (2030, 110, 'Griffith', NULL),
-  (2031, 110, 'Tuscan', NULL),
-  (2032, 110, 'Other', NULL),
-  (2033, 111, '181', NULL),
-  (2034, 111, 'Amarok', NULL),
-  (2035, 111, 'Arteon', NULL),
-  (2036, 111, 'Beetle', NULL),
-  (2037, 111, 'Beetle', NULL),
-  (2038, 111, 'Bora', NULL),
-  (2039, 111, 'Buggy', NULL),
-  (2040, 111, 'Caddy', NULL),
-  (2041, 111, 'CC', NULL),
-  (2042, 111, 'Corrado', NULL),
-  (2043, 111, 'Crafter', NULL),
-  (2044, 111, 'Eos', NULL),
-  (2045, 111, 'Fox', NULL),
-  (2046, 111, 'Golf', 'Golf'),
-  (2047, 111, 'Golf Plus', 'Golf'),
-  (2048, 111, 'Golf Sportsvan', 'Golf'),
-  (2049, 111, 'Iltis', NULL),
-  (2050, 111, 'Jetta', NULL),
-  (2051, 111, 'Karmann Ghia', NULL),
-  (2052, 111, 'LT', NULL),
-  (2053, 111, 'Lupo', NULL),
-  (2054, 111, 'New Beetle', NULL),
-  (2055, 111, 'Passat', 'Passat'),
-  (2056, 111, 'Passat Alltrack', 'Passat'),
-  (2057, 111, 'Passat CC', 'Passat'),
-  (2058, 111, 'Passat Variant', 'Passat'),
-  (2059, 111, 'Phaeton', NULL),
-  (2060, 111, 'Polo', NULL),
-  (2061, 111, 'Routan', NULL),
-  (2062, 111, 'Santana', NULL),
-  (2063, 111, 'Scirocco', NULL),
-  (2064, 111, 'Sharan', NULL),
-  (2065, 111, 'T1', NULL),
-  (2066, 111, 'T2', NULL),
-  (2067, 111, 'T3 Caravelle', 'T3'),
-  (2068, 111, 'T3 Kombi', 'T3'),
-  (2069, 111, 'T3 Multivan', 'T3'),
-  (2070, 111, 'T3 other', 'T3'),
-  (2071, 111, 'T4 California', 'T4'),
-  (2072, 111, 'T4 Caravelle', 'T4'),
-  (2073, 111, 'T4 Kombi', 'T4'),
-  (2074, 111, 'T4 Multivan', 'T4'),
-  (2075, 111, 'T4 other', 'T4'),
-  (2076, 111, 'T5 California', 'T5'),
-  (2077, 111, 'T5 Caravelle', 'T5'),
-  (2078, 111, 'T5 Kombi', 'T5'),
-  (2079, 111, 'T5 Multivan', 'T5'),
-  (2080, 111, 'T5 other', 'T5'),
-  (2081, 111, 'T5 Shuttle', 'T5'),
-  (2082, 111, 'T5 Transporter', 'T5'),
-  (2083, 111, 'T6 California', 'T6'),
-  (2084, 111, 'T6 Caravelle', 'T6'),
-  (2085, 111, 'T6 Kombi', 'T6'),
-  (2086, 111, 'T6 Multivan', 'T6'),
-  (2087, 111, 'T6 other', 'T6'),
-  (2088, 111, 'T6 Transporter', 'T6'),
-  (2089, 111, 'Taro', NULL),
-  (2090, 111, 'T-Cross', NULL),
-  (2091, 111, 'Tiguan', NULL),
-  (2092, 111, 'Tiguan Allspace', NULL),
-  (2093, 111, 'Touareg', NULL),
-  (2094, 111, 'Touran', NULL),
-  (2095, 111, 'T-Roc', NULL),
-  (2096, 111, 'up!', NULL),
-  (2097, 111, 'Vento', NULL),
-  (2098, 111, 'XL1', NULL),
-  (2099, 111, 'Other', NULL),
-  (2100, 112, '240', NULL),
-  (2101, 112, '244', NULL),
-  (2102, 112, '245', NULL),
-  (2103, 112, '262', NULL),
-  (2104, 112, '264', NULL),
-  (2105, 112, '340', NULL),
-  (2106, 112, '360', NULL),
-  (2107, 112, '440', NULL),
-  (2108, 112, '460', NULL),
-  (2109, 112, '480', NULL),
-  (2110, 112, '740', NULL),
-  (2111, 112, '744', NULL),
-  (2112, 112, '745', NULL),
-  (2113, 112, '760', NULL),
-  (2114, 112, '780', NULL),
-  (2115, 112, '850', NULL),
-  (2116, 112, '855', NULL),
-  (2117, 112, '940', NULL),
-  (2118, 112, '944', NULL),
-  (2119, 112, '945', NULL),
-  (2120, 112, '960', NULL),
-  (2121, 112, '965', NULL),
-  (2122, 112, 'Amazon', NULL),
-  (2123, 112, 'C30', NULL),
-  (2124, 112, 'C70', NULL),
-  (2125, 112, 'Polar', NULL),
-  (2126, 112, 'S40', NULL),
-  (2127, 112, 'S60', NULL),
-  (2128, 112, 'S60 Cross Country', NULL),
-  (2129, 112, 'S70', NULL),
-  (2130, 112, 'S80', NULL),
-  (2131, 112, 'S90', NULL),
-  (2132, 112, 'V40', NULL),
-  (2133, 112, 'V40 Cross Country', NULL),
-  (2134, 112, 'V50', NULL),
-  (2135, 112, 'V60', NULL),
-  (2136, 112, 'V60 Cross Country', NULL),
-  (2137, 112, 'V70', NULL),
-  (2138, 112, 'V90', NULL),
-  (2139, 112, 'V90 Cross Country', NULL),
-  (2140, 112, 'XC40', NULL),
-  (2141, 112, 'XC60', NULL),
-  (2142, 112, 'XC70', NULL),
-  (2143, 112, 'XC90', NULL),
-  (2144, 112, 'Other', NULL),
-  (2145, 113, '311', NULL),
-  (2146, 113, '353', NULL),
-  (2147, 113, 'Other', NULL),
-  (2148, 114, 'Other', NULL),
-  (2149, 115, 'MF 25', NULL),
-  (2150, 115, 'MF 28', NULL),
-  (2151, 115, 'MF 3', NULL),
-  (2152, 115, 'MF 30', NULL),
-  (2153, 115, 'MF 35', NULL),
-  (2154, 115, 'MF 4', NULL),
-  (2155, 115, 'MF 5', NULL),
-  (2156, 115, 'Other', NULL),
-  (2157, 116, 'Other', NULL);
-SET IDENTITY_INSERT CarModels OFF;
+CREATE USER 'cars'@'localhost' IDENTIFIED BY 'My0ldC4r$';
+
+GRANT ALL ON carsIveOwned.* TO 'cars'@'localhost';
+
+USE carsIveOwned;
+
+CREATE TABLE manufacturers (
+  id INT auto_increment,
+  name VARCHAR(255),
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  deletedAt DATETIME,
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE models (
+  id INT auto_increment,
+  name VARCHAR(255) NOT NULL,
+  manufacturerID INT,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  deletedAt DATETIME,
+  PRIMARY KEY (id),
+  FOREIGN KEY (manufacturerID) REFERENCES manufacturers (id)
+);
+
+CREATE TABLE ownedVehicles (
+id INT auto_increment,
+modelID INT,
+year DECIMAL(4,0),
+currentVehicle ENUM('yes', 'no'),
+repurchase ENUM('yes', 'no'),
+createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+deletedAt DATETIME,
+PRIMARY KEY (id),
+FOREIGN KEY (modelID) REFERENCES models (id)
+);
+
+INSERT INTO manufacturers (name, id) VALUES ("Alfa Romeo", 5);
+INSERT INTO manufacturers (name, id) VALUES ("Audi", 10);
+INSERT INTO manufacturers (name, id) VALUES ("BMW", 14);
+INSERT INTO manufacturers (name, id) VALUES ("Cadillac", 19);
+INSERT INTO manufacturers (name, id) VALUES ("Chevrolet", 23);
+INSERT INTO manufacturers (name, id) VALUES ("Chrysler", 24);
+INSERT INTO manufacturers (name, id) VALUES ("Dodge", 33);
+INSERT INTO manufacturers (name, id) VALUES ("Fiat", 37);
+INSERT INTO manufacturers (name, id) VALUES ("Ford", 39);
+INSERT INTO manufacturers (name, id) VALUES ("Honda", 46);
+INSERT INTO manufacturers (name, id) VALUES ("Jeep", 53);
+INSERT INTO manufacturers (name, id) VALUES ("Lexus", 62);
+INSERT INTO manufacturers (name, id) VALUES ("Mazda", 69);
+INSERT INTO manufacturers (name, id) VALUES ("Mercedes-Benz", 71);
+INSERT INTO manufacturers (name, id) VALUES ("Mitsubishi", 75);
+INSERT INTO manufacturers (name, id) VALUES ("Nissan", 77);
+INSERT INTO manufacturers (name, id) VALUES ("Plymouth", 84);
+INSERT INTO manufacturers (name, id) VALUES ("Saab", 93);
+INSERT INTO manufacturers (name, id) VALUES ("Suzuki", 102);
+INSERT INTO manufacturers (name, id) VALUES ("Volkswagen", 111);
+INSERT INTO manufacturers (name, id) VALUES ("Other", 116);
+
+INSERT INTO models (id, name, manufacturerID) VALUES (1, "4C", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (2, "8C", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (3, "Alfa145", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (4, "Alfa146", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (5, "Alfa147", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (6, "Alfa155", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (7, "Alfa156", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (8, "Alfa159", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (9, "Alfa164", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (10, "Alfa166", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (11, "Alfa33", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (12, "Alfa75", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (13, "Alfa90", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (14, "Alfasud", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (15, "Alfetta", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (16, "Brera", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (17, "Crosswagon", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (18, "Giulia", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (19, "Giulietta", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (20, "GT", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (21, "GTV", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (22, "Junior", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (23, "MiTo", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (24, "Spider", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (25, "Sprint", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (26, "Stelvio", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (27, "Other", 5);
+INSERT INTO models (id, name, manufacturerID) VALUES (28, "100", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (29, "200", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (30, "80", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (31, "90", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (32, "A1", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (33, "A2", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (34, "A3", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (35, "A4", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (36, "A4Allroad", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (37, "A5", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (38, "A6", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (39, "A6Allroad", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (40, "A7", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (41, "A8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (42, "Cabriolet", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (43, "Coupé", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (44, "e-tron", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (45, "Q1", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (46, "Q2", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (47, "Q3", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (48, "Q5", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (49, "Q7", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (50, "Q8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (51, "quattro", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (52, "R8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (53, "RS2", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (54, "RS3", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (55, "RS4", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (56, "RS5", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (57, "RS6", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (58, "RS7", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (59, "RSQ3", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (60, "S1", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (61, "S2", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (62, "S3", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (63, "S4", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (64, "S5", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (65, "S6", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (66, "S7", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (67, "S8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (68, "SQ2", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (69, "SQ5", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (70, "SQ7", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (71, "SQ8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (72, "TT", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (73, "TTRS", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (74, "TTS", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (75, "V8", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (76, "Other", 10);
+INSERT INTO models (id, name, manufacturerID) VALUES (77, "114", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (78, "116", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (79, "118", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (80, "120", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (81, "123", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (82, "125", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (83, "130", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (84, "135", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (85, "1erMCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (86, "2002", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (87, "214ActiveTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (88, "214GranTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (89, "216", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (90, "216ActiveTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (91, "216GranTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (92, "218", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (93, "218ActiveTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (94, "218GranTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (95, "220", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (96, "220ActiveTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (97, "220GranTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (98, "225", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (99, "225ActiveTourer", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (100, "228", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (101, "230", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (102, "315", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (103, "316", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (104, "318", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (105, "318GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (106, "320", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (107, "320GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (108, "323", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (109, "324", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (110, "325", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (111, "325GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (112, "328", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (113, "328GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (114, "330", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (115, "330GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (116, "335", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (117, "335GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (118, "340", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (119, "340GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (120, "ActiveHybrid3", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (121, "418", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (122, "418GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (123, "420", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (124, "420GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (125, "425", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (126, "425GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (127, "428", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (128, "428GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (129, "430", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (130, "430GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (131, "435", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (132, "435GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (133, "440", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (134, "440GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (135, "518", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (136, "520", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (137, "520GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (138, "523", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (139, "524", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (140, "525", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (141, "528", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (142, "530", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (143, "530GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (144, "535", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (145, "535GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (146, "540", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (147, "545", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (148, "550", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (149, "550GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (150, "ActiveHybrid5", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (151, "620GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (152, "628", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (153, "630", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (154, "630GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (155, "633", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (156, "635", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (157, "640", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (158, "640GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (159, "640GranTurismo", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (160, "645", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (161, "650", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (162, "650GranCoupé", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (163, "725", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (164, "728", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (165, "730", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (166, "732", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (167, "735", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (168, "740", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (169, "745", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (170, "750", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (171, "760", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (172, "ActiveHybrid7", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (173, "840", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (174, "850", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (175, "i3", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (176, "i8", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (177, "M135", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (178, "M140i", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (179, "M2", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (180, "M235", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (181, "M240i", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (182, "M3", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (183, "M340i", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (184, "M4", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (185, "M5", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (186, "M550", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (187, "M6", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (188, "M760", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (189, "M850", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (190, "ActiveHybridX6", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (191, "X1", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (192, "X2", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (193, "X3", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (194, "X3M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (195, "X3M40", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (196, "X4", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (197, "X4M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (198, "X4M40", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (199, "X5", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (200, "X5M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (201, "X5M50", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (202, "X6", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (203, "X6M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (204, "X6M50", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (205, "X7", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (206, "Z1", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (207, "Z3", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (208, "Z3M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (209, "Z4", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (210, "Z4M", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (211, "Z8", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (212, "Other", 14);
+INSERT INTO models (id, name, manufacturerID) VALUES (213, "Allante", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (214, "ATS", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (215, "BLS", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (216, "CT6", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (217, "CTS", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (218, "Deville", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (219, "Eldorado", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (220, "Escalade", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (221, "Fleetwood", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (222, "Seville", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (223, "SRX", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (224, "STS", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (225, "XLR", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (226, "XT5", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (227, "Other", 19);
+INSERT INTO models (id, name, manufacturerID) VALUES (228, "2500", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (229, "Alero", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (230, "Astro", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (231, "Avalanche", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (232, "Aveo", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (233, "Beretta", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (234, "Blazer", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (235, "C1500", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (236, "Camaro", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (237, "Caprice", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (238, "Captiva", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (239, "Cavalier", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (240, "Chevelle", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (241, "ChevyVan", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (242, "Citation", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (243, "Colorado", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (244, "Corsica", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (245, "Cruze", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (246, "ElCamino", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (247, "Epica", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (248, "Evanda", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (249, "Express", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (250, "G", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (251, "HHR", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (252, "Impala", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (253, "K1500", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (254, "K30", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (255, "Kalos", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (256, "Lacetti", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (257, "Lumina", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (258, "Malibu", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (259, "Matiz", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (260, "Niva", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (261, "Nubira", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (262, "Orlando", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (263, "Rezzo", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (264, "S-10", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (265, "Silverado", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (266, "Spark", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (267, "SSR", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (268, "Suburban", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (269, "Tahoe", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (270, "Trailblazer", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (271, "TransSport", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (272, "Traverse", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (273, "Trax", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (274, "Venture", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (275, "Volt", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (276, "Other", 23);
+INSERT INTO models (id, name, manufacturerID) VALUES (277, "200", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (278, "300C", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (279, "300M", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (280, "Aspen", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (281, "Crossfire", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (282, "Daytona", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (283, "ES", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (284, "GrandVoyager", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (285, "GS", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (286, "GTS", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (287, "Imperial", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (288, "LeBaron", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (289, "Neon", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (290, "NewYorker", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (291, "Pacifica", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (292, "PTCruiser", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (293, "Saratoga", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (294, "Sebring", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (295, "Stratus", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (296, "Valiant", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (297, "Viper", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (298, "Vision", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (299, "Voyager", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (300, "Other", 24);
+INSERT INTO models (id, name, manufacturerID) VALUES (301, "Avenger", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (302, "Caliber", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (303, "Challenger", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (304, "Charger", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (305, "Dakota", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (306, "Dart", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (307, "Demon", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (308, "Durango", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (309, "GrandCaravan", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (310, "Hornet", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (311, "Journey", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (312, "Magnum", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (313, "Neon", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (314, "Nitro", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (315, "RAM", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (316, "Stealth", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (317, "Viper", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (318, "Other", 33);
+INSERT INTO models (id, name, manufacturerID) VALUES (319, "124", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (320, "124Spider", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (321, "126", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (322, "127", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (323, "130", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (324, "131", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (325, "500", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (326, "500C", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (327, "500L", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (328, "500LCross", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (329, "500LLiving", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (330, "500LTrekking", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (331, "500LUrban", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (332, "500LWagon", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (333, "500S", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (334, "500X", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (335, "Albea", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (336, "Barchetta", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (337, "Brava", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (338, "Bravo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (339, "Cinquecento", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (340, "Coupe", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (341, "Croma", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (342, "Dino", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (343, "Doblo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (344, "Ducato", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (345, "Fiorino", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (346, "Freemont", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (347, "Fullback", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (348, "GrandePunto", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (349, "Idea", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (350, "Linea", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (351, "Marea", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (352, "Marengo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (353, "Multipla", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (354, "NewPanda", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (355, "Palio", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (356, "Panda", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (357, "Punto", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (358, "PuntoEvo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (359, "Qubo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (360, "Regata", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (361, "Ritmo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (362, "Scudo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (363, "Sedici", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (364, "Seicento", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (365, "Siena", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (366, "SpiderEuropa", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (367, "Stilo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (368, "Strada", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (369, "Talento", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (370, "Tempra", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (371, "Tipo", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (372, "Ulysse", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (373, "Uno", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (374, "X1/9", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (375, "Other", 37);
+INSERT INTO models (id, name, manufacturerID) VALUES (376, "Aerostar", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (377, "B-Max", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (378, "Bronco", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (379, "Capri", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (380, "C-Max", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (381, "Cougar", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (382, "Courier", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (383, "Crown", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (384, "Econoline", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (385, "Econovan", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (386, "EcoSport", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (387, "Edge", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (388, "Escape", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (389, "Escort", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (390, "Excursion", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (391, "Expedition", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (392, "Explorer", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (393, "Express", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (394, "F100", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (395, "F150", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (396, "F250", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (397, "F350", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (398, "Fairlane", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (399, "Falcon", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (400, "Fiesta", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (401, "Flex", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (402, "Focus", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (403, "Fusion", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (404, "Galaxy", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (405, "Granada", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (406, "GrandC-Max", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (407, "GrandTourneo", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (408, "GT", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (409, "Ka/Ka+", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (410, "Kuga", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (411, "Maverick", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (412, "Mercury", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (413, "Mondeo", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (414, "Mustang", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (415, "Orion", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (416, "Probe", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (417, "Puma", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (418, "Ranger", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (419, "Raptor", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (420, "Scorpio", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (421, "Sierra", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (422, "S-Max", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (423, "Sportka", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (424, "Streetka", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (425, "Taunus", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (426, "Taurus", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (427, "Thunderbird", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (428, "Tourneo", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (429, "TourneoConnect", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (430, "TourneoCourier", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (431, "TourneoCustom", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (432, "Transit", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (433, "TransitConnect", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (434, "TransitCourier", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (435, "TransitCustom", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (436, "Windstar", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (437, "Other", 39);
+INSERT INTO models (id, name, manufacturerID) VALUES (439, "Accord", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (440, "Aerodeck", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (441, "City", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (442, "Civic", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (443, "Clarity", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (444, "Concerto", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (445, "CR-V", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (446, "CRX", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (447, "CR-Z", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (448, "e", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (449, "Element", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (450, "FR-V", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (451, "HR-V", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (452, "Insight", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (453, "Integra", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (454, "Jazz", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (455, "Legend", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (456, "Logo", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (457, "NSX", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (458, "Odyssey", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (459, "Pilot", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (460, "Prelude", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (461, "Ridgeline", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (462, "S2000", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (463, "Shuttle", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (464, "Stream", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (465, "Other", 46);
+INSERT INTO models (id, name, manufacturerID) VALUES (470, "Cherokee", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (471, "CJ", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (472, "Comanche", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (473, "Commander", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (474, "Compass", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (475, "GrandCherokee", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (476, "Patriot", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (477, "Renegade", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (478, "Wagoneer", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (479, "Willys", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (480, "Wrangler", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (481, "Other", 53);
+INSERT INTO models (id, name, manufacturerID) VALUES (482, "CT200h", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (483, "ES300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (484, "ES330", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (485, "ES350", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (486, "GS250", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (487, "GS300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (488, "GS350", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (489, "GS430", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (490, "GS450", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (491, "GS460", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (492, "GSF", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (493, "GX470", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (494, "IS200", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (495, "IS220", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (496, "IS250", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (497, "IS300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (498, "IS350", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (499, "IS-F", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (500, "LC500", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (501, "LC500h", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (502, "LFA", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (503, "LS400", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (504, "LS430", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (505, "LS460", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (506, "LS500", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (507, "LS600", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (508, "LX470", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (509, "LX570", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (510, "NX200", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (511, "NX300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (512, "RC200", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (513, "RC300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (514, "RC350", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (515, "RCF", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (516, "RX200", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (517, "RX300", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (518, "RX330", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (519, "RX350", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (520, "RX400", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (521, "RX450", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (522, "SC400", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (523, "SC430", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (524, "UX", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (525, "Other", 62);
+INSERT INTO models (id, name, manufacturerID) VALUES (526, "121", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (527, "2", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (528, "3", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (529, "323", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (530, "5", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (531, "6", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (532, "626", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (533, "929", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (534, "Bongo", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (535, "Bseries", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (536, "BT-50", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (537, "CX-3", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (538, "CX-30", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (539, "CX-5", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (540, "CX-7", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (541, "CX-9", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (542, "Demio", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (543, "Eseries", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (544, "Millenia", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (545, "MPV", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (546, "MX-3", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (547, "MX-5", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (548, "MX-6", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (549, "Premacy", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (550, "Protege", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (551, "RX-6", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (552, "RX-7", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (553, "RX-8", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (554, "Tribute", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (555, "Xedos", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (556, "Other", 69);
+INSERT INTO models (id, name, manufacturerID) VALUES (557, "190", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (558, "200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (559, "220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (560, "230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (561, "240", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (562, "250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (563, "260", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (564, "270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (565, "280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (566, "290", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (567, "300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (568, "320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (569, "350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (570, "380", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (571, "400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (572, "416", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (573, "420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (574, "450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (575, "500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (576, "560", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (577, "600", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (578, "A140", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (579, "A150", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (580, "A160", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (581, "A170", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (582, "A180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (583, "A190", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (584, "A200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (585, "A210", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (586, "A220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (587, "A250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (588, "A35AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (589, "A45AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (590, "B150", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (591, "B160", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (592, "B170", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (593, "B180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (594, "B200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (595, "B220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (596, "B250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (597, "BElectricDrive", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (598, "C160", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (599, "C180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (600, "C200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (601, "C220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (602, "C230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (603, "C240", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (604, "C250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (605, "C270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (606, "C280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (607, "C300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (608, "C30AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (609, "C320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (610, "C32AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (611, "C350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (612, "C36AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (613, "C400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (614, "C43AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (615, "C450AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (616, "C55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (617, "C63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (618, "CE200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (619, "CE220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (620, "CE230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (621, "CE280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (622, "CE300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (623, "CE320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (624, "Citan", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (625, "CLA180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (626, "CLA180ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (627, "CLA200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (628, "CLA200ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (629, "CLA220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (630, "CLA220ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (631, "CLA250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (632, "CLA250ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (633, "CLA35AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (634, "CLA45AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (635, "CLA45AMGShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (636, "CLAShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (637, "CLC160", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (638, "CLC180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (639, "CLC200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (640, "CLC220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (641, "CLC230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (642, "CLC250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (643, "CLC350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (644, "CL160", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (645, "CL180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (646, "CL200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (647, "CL220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (648, "CL230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (649, "CL320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (650, "CL420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (651, "CL500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (652, "CL55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (653, "CL600", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (654, "CL63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (655, "CL65AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (656, "CLK200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (657, "CLK220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (658, "CLK230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (659, "CLK240", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (660, "CLK270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (661, "CLK280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (662, "CLK320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (663, "CLK350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (664, "CLK430", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (665, "CLK500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (666, "CLK55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (667, "CLK63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (668, "CLS220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (669, "CLS220ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (670, "CLS250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (671, "CLS250ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (672, "CLS280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (673, "CLS300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (674, "CLS320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (675, "CLS350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (676, "CLS350ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (677, "CLS400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (678, "CLS400ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (679, "CLS450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (680, "CLS500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (681, "CLS500ShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (682, "CLS53AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (683, "CLS55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (684, "CLS63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (685, "CLS63AMGShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (686, "CLSShootingBrake", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (687, "E200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (688, "E220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (689, "E230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (690, "E240", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (691, "E250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (692, "E260", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (693, "E270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (694, "E280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (695, "E290", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (696, "E300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (697, "E320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (698, "E350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (699, "E36AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (700, "E400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (701, "E420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (702, "E430", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (703, "E43AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (704, "E450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (705, "E50", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (706, "E500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (707, "E53AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (708, "E55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (709, "E60AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (710, "E63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (711, "EQC", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (712, "G230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (713, "G240", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (714, "G250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (715, "G270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (716, "G280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (717, "G290", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (718, "G300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (719, "G320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (720, "G350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (721, "G400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (722, "G500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (723, "G55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (724, "G63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (725, "G65AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (726, "GLA180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (727, "GLA200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (728, "GLA220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (729, "GLA250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (730, "GLA45AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (731, "GLB180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (732, "GLB200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (733, "GLB220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (734, "GLB250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (735, "GLC200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (736, "GLC220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (737, "GLC250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (738, "GLC300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (739, "GLC350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (740, "GLC400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (741, "GLC43AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (742, "GLC63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (743, "GL320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (744, "GL350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (745, "GL400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (746, "GL420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (747, "GL450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (748, "GL500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (749, "GL55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (750, "GL63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (751, "GLE250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (752, "GLE300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (753, "GLE350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (754, "GLE400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (755, "GLE43AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (756, "GLE450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (757, "GLE500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (758, "GLE53AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (759, "GLE63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (760, "GLK200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (761, "GLK220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (762, "GLK250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (763, "GLK280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (764, "GLK300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (765, "GLK320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (766, "GLK350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (767, "GLS350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (768, "GLS400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (769, "GLS500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (770, "GLS63", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (771, "AMGGT", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (772, "AMGGTC", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (773, "AMGGTR", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (774, "AMGGTS", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (775, "MB100", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (776, "ML230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (777, "ML250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (778, "ML270", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (779, "ML280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (780, "ML300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (781, "ML320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (782, "ML350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (783, "ML400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (784, "ML420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (785, "ML430", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (786, "ML450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (787, "ML500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (788, "ML55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (789, "ML63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (790, "R280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (791, "R300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (792, "R320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (793, "R350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (794, "R500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (795, "R63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (796, "S250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (797, "S260", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (798, "S280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (799, "S300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (800, "S320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (801, "S350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (802, "S400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (803, "S420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (804, "S430", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (805, "S450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (806, "S500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (807, "S55", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (808, "S550", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (809, "S560", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (810, "S600", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (811, "S63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (812, "S650", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (813, "S65AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (814, "SLC180", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (815, "SLC200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (816, "SLC250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (817, "SLC280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (818, "SLC300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (819, "SLC43AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (820, "SL280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (821, "SL300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (822, "SL320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (823, "SL350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (824, "SL380", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (825, "SL400", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (826, "SL420", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (827, "SL450", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (828, "SL500", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (829, "SL55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (830, "SL560", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (831, "SL600", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (832, "SL60AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (833, "SL63AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (834, "SL65AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (835, "SL70AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (836, "SL73AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (837, "SLK200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (838, "SLK230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (839, "SLK250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (840, "SLK280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (841, "SLK300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (842, "SLK320", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (843, "SLK32AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (844, "SLK350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (845, "SLK55AMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (846, "SLR", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (847, "SLSAMG", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (848, "Sprinter", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (849, "Vaneo", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (850, "Vario", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (851, "V200", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (852, "V220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (853, "V230", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (854, "V250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (855, "V280", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (856, "V300", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (857, "Viano", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (858, "Vito", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (859, "X220", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (860, "X250", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (861, "X350", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (862, "Other", 71);
+INSERT INTO models (id, name, manufacturerID) VALUES (863, "3000GT", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (864, "ASX", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (865, "Canter", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (866, "Carisma", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (867, "Colt", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (868, "Cordia", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (869, "Cosmos", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (870, "Diamante", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (871, "Eclipse", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (872, "EclipseCross", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (873, "Galant", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (874, "Galloper", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (875, "Grandis", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (876, "i-MiEV", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (877, "L200", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (878, "L300", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (879, "L400", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (880, "Lancer", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (881, "Mirage", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (882, "Montero", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (883, "Outlander", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (884, "Pajero", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (885, "PajeroPinin", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (886, "Pick-up", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (887, "Plug-inHybridOutlander", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (888, "Santamo", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (889, "Sapporo", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (890, "Sigma", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (891, "SpaceGear", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (892, "SpaceRunner", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (893, "SpaceStar", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (894, "SpaceWagon", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (895, "Starion", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (896, "Tredia", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (897, "Other", 75);
+INSERT INTO models (id, name, manufacturerID) VALUES (898, "100NX", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (899, "200SX", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (900, "240SX", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (901, "280ZX", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (902, "300ZX", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (903, "350Z", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (904, "370Z", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (905, "Almera", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (906, "AlmeraTino", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (907, "Altima", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (908, "Armada", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (909, "Bluebird", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (910, "Cabstar", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (911, "Cargo", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (912, "Cherry", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (913, "Cube", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (914, "e-NV200", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (915, "Evalia", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (916, "Frontier", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (917, "GT-R", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (918, "Interstar", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (919, "Juke", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (920, "KingCab", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (921, "Kubistar", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (922, "Laurel", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (923, "Leaf", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (924, "Maxima", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (925, "Micra", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (926, "Murano", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (927, "Navara", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (928, "Note", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (929, "NP300", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (930, "NV200", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (931, "NV250", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (932, "NV300", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (933, "NV400", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (934, "Pathfinder", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (935, "Patrol", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (936, "PickUp", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (937, "Pixo", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (938, "Prairie", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (939, "Primastar", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (940, "Primera", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (941, "Pulsar", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (942, "Qashqai", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (943, "Qashqai+2", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (944, "Quest", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (945, "Sentra", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (946, "Serena", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (947, "Silvia", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (948, "Skyline", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (949, "Sunny", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (950, "Terrano", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (951, "Tiida", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (952, "Titan", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (953, "Trade", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (954, "Urvan", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (955, "Vanette", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (956, "X-Trail", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (957, "Other", 77);
+INSERT INTO models (id, name, manufacturerID) VALUES (1007, "Prowler", 84);
+INSERT INTO models (id, name, manufacturerID) VALUES (1008, "Other", 84);
+INSERT INTO models (id, name, manufacturerID) VALUES (1009, "90", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1010, "900", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1011, "9000", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1012, "44077", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1013, "9-4X", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1014, "44079", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1015, "96", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1016, "9-7X", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1017, "99", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1018, "Other", 93);
+INSERT INTO models (id, name, manufacturerID) VALUES (1023, "Alto", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1024, "Baleno", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1025, "Cappuccino", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1026, "Carry", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1027, "Celerio", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1028, "GrandVitara", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1029, "Ignis", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1030, "iK-2", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1031, "Jimny", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1032, "Kizashi", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1033, "Liana", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1034, "LJ", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1035, "Samurai", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1036, "Splash", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1037, "Super-Carry", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1038, "Swift", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1039, "SX4", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1040, "SX4S-Cross", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1041, "Vitara", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1042, "WagonR+", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1043, "X-90", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1044, "Other", 102);
+INSERT INTO models (id, name, manufacturerID) VALUES (1045, "181", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1046, "Amarok", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1047, "Arteon", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1048, "Beetle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1049, "Beetle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1050, "Bora", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1051, "Buggy", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1052, "Caddy", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1053, "CC", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1054, "Corrado", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1055, "Crafter", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1056, "Eos", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1057, "Fox", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1058, "Golf", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1059, "GolfPlus", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1060, "GolfSportsvan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1061, "Iltis", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1062, "Jetta", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1063, "KarmannGhia", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1064, "LT", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1065, "Lupo", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1066, "NewBeetle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1067, "Passat", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1068, "PassatAlltrack", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1069, "PassatCC", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1070, "PassatVariant", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1071, "Phaeton", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1072, "Polo", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1073, "Routan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1074, "Santana", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1075, "Scirocco", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1076, "Sharan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1077, "T1", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1078, "T2", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1079, "T3Caravelle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1080, "T3Kombi", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1081, "T3Multivan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1082, "T3other", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1083, "T4California", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1084, "T4Caravelle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1085, "T4Kombi", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1086, "T4Multivan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1087, "T4other", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1088, "T5California", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1089, "T5Caravelle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1090, "T5Kombi", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1091, "T5Multivan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1092, "T5other", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1093, "T5Shuttle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1094, "T5Transporter", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1095, "T6California", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1096, "T6Caravelle", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1097, "T6Kombi", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1098, "T6Multivan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1099, "T6other", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1100, "T6Transporter", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1101, "Taro", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1102, "T-Cross", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1103, "Tiguan", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1104, "TiguanAllspace", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1105, "Touareg", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1106, "Touran", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1107, "T-Roc", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1108, "up!", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1109, "Vento", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1110, "XL1", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1111, "Other", 111);
+INSERT INTO models (id, name, manufacturerID) VALUES (1112, "Other", 116);
+
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (1, 320, 1976, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (2, 1008, 1973, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (3, 941, 1984, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (4, 1035, 1985, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (5, 374, 1981, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (6, 237, 1980, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (7, 24, 1973, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (8, 470, 1986, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (9, 392, 1989, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (10, 227, 1991, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (11, 391, 2003, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (12, 530, 2013, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (13, 309, 2008, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (14, 35, 2005, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (15, 1012, 2005, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (16, 401, 2009, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (17, 517, 1996, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (18, 697, 2003, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (19, 1073, 2011, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (20, 106, 1996, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (21, 480, 1985, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (22, 220, 2007, "no", "yes");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (23, 934, 2007, "yes", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (24, 883, 2015, "yes", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (25, 871, 1994, "no", "no");
+INSERT INTO ownedVehicles (id, modelID, year, currentVehicle, repurchase) VALUES (26, 460, 1984, "no", "no");

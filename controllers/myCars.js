@@ -41,7 +41,7 @@ const getMyCarsToRepurchase = async (request, response) => {
       ? response.send(foundMyCars)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve vehicle model, please try agin')
+    return response.status(500).send('Unable to retrieve owned vehicles, please try agin')
   }
 }
 
@@ -66,7 +66,7 @@ const getAllMyCarsByYear = async (request, response) => {
       ? response.send(foundMyCars)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve vehicle model, please try agin')
+    return response.status(500).send('Unable to retrieve owned vehicles, please try again')
   }
 }
 

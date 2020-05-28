@@ -11,7 +11,7 @@ const getAllVehicleModels = async (request, response) => {
 
     return vehicleModels ? response.send(vehicleModels) : response.status(500)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve vehicle models, please try agin')
+    return response.status(500).send('Unable to retrieve vehicle models, please try again')
   }
 }
 
@@ -32,7 +32,7 @@ const getVehicleModelsByIdentifier = async (request, response) => {
       ? response.send(foundVehicleModel)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve vehicle model, please try agin')
+    return response.status(500).send('Unable to retrieve vehicle model, please try again')
   }
 }
 

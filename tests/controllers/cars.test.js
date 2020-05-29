@@ -12,6 +12,7 @@ const { getAllManufacturers, getManufacturersByIdentifier } = require('../../con
 const { getAllVehicleModels, getVehicleModelsByIdentifier } = require('../../controllers/vehicleModels')
 const { getAllMyCars, getMyCarsToRepurchase, getAllMyCarsByYear, saveMyNewCar } = require('../../controllers/myCars')
 
+
 chai.use(sinonChai)
 const { expect } = chai
 
@@ -23,6 +24,7 @@ describe('Controllers - API', () => {
   let stubbedVehicleModelsFindAll
   let stubbedMyCarsFindAll
   let stubbedStatusSend
+  let stubbedSaveMyNewCar
 
 
   beforeEach(() => {
@@ -40,7 +42,7 @@ describe('Controllers - API', () => {
     stubbedManufacturersFindOne = sandbox.stub(models.manufacturers, 'findOne')
     stubbedVehicleModelsFindAll = sandbox.stub(models.vehicleModels, 'findAll')
     stubbedMyCarsFindAll = sandbox.stub(models.myCars, 'findAll')
-
+    stubbedSaveMyNewCar = sandbox.stub(models.myCars, 'create')
   })
 
   after(() => {
@@ -282,24 +284,64 @@ describe('Controllers - API', () => {
       it('returns a 500 error when the database calls fails', async () => {
         stubbedMyCarsFindAll.throws('ERROR!')
 
-        const request = { params: { identifier: 'yes' } }
+        const request = { params: { identifier: 1996 } }
 
-        await getMyCarsToRepurchase(request, response)
+        await getAllMyCarsByYear(request, response)
 
         expect(stubbedMyCarsFindAll).to.have.been.calledWith({
-          attributes: [],
-          where: { repurchase: { [models.Op.like]: '%yes%' } },
+          attributes: ['currentVehicle', 'repurchase'],
+          where: { year: 1996 },
           include: [{
             model: models.vehicleModels,
             attributes: ['id', 'name'],
             include: [{
               model: models.manufacturers,
-              attributes: ['id', 'name'],
+              attributes: ['id', 'name']
             }]
           }]
         })
         expect(response.status).to.have.been.calledWith(500)
         expect(stubbedStatusSend).to.have.been.calledWith('Unable to retrieve owned vehicles, please try again')
+      })
+    })
+    describe('saveMyNewCar', () => {
+      it('returns a 201 with the new MyCar when created', async () => {
+        stubbedSaveMyNewCar.returns(postedMyCar)
+
+        const request = { body: { vehicleId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes' } }
+
+        await saveMyNewCar(request, response)
+
+        expect(stubbedSaveMyNewCar).to.have.been.calledWith({
+          vehicleId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes'
+        })
+        expect(response.status).to.have.been.calledWith(201)
+        expect(stubbedStatusSend).to.have.been.calledWith(postedMyCar)
+      })
+
+      it('returns a 400 when missing data', async () => {
+        const request = { body: { vehicleId: 13 } }
+
+        await saveMyNewCar(request, response)
+
+        expect(stubbedSaveMyNewCar).to.have.callCount(0)
+        expect(response.status).to.have.been.calledWith(400)
+        expect(stubbedStatusSend).to.have.been
+          .calledWith('Required fields are: vehicleModelId, year, currentVehicle, repurchase')
+      })
+
+      it('returns a 500 error when the database calls fails', async () => {
+        stubbedSaveMyNewCar.throws('ERROR!')
+
+        const request = { body: { vehicleModelId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes' } }
+
+        await saveMyNewCar(request, response)
+
+        expect(stubbedSaveMyNewCar).to.have.been.calledWith({
+          vehicleModelId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes'
+        })
+        expect(response.status).to.have.been.calledWith(500)
+        expect(stubbedStatusSend).to.have.been.calledWith('Unable to add new owned vehicle, please try again')
       })
     })
   })

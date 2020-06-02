@@ -1,12 +1,12 @@
-const models = require('../models')
+import models from '../models'
 
-const getAllVehicleModels = async (request, response) => {
+export const getAllVehicleModels = async (request, response) => {
   try {
     const vehicleModels = await models.vehicleModels.findAll({
       include: [{
         model: models.manufacturers,
-        attributes: ['id', 'name']
-      }]
+        attributes: ['id', 'name'],
+      }],
     })
 
     return vehicleModels ? response.send(vehicleModels) : response.status(500)
@@ -15,7 +15,7 @@ const getAllVehicleModels = async (request, response) => {
   }
 }
 
-const getVehicleModelsByIdentifier = async (request, response) => {
+export const getVehicleModelsByIdentifier = async (request, response) => {
   try {
     const { identifier } = request.params
 
@@ -24,8 +24,8 @@ const getVehicleModelsByIdentifier = async (request, response) => {
       where: { name: { [models.Op.like]: `%${identifier}%` } },
       include: [{
         model: models.manufacturers,
-        attributes: ['id', 'name']
-      }]
+        attributes: ['id', 'name'],
+      }],
     })
 
     return foundVehicleModel
@@ -35,5 +35,3 @@ const getVehicleModelsByIdentifier = async (request, response) => {
     return response.status(500).send('Unable to retrieve vehicle model, please try again')
   }
 }
-
-module.exports = { getAllVehicleModels, getVehicleModelsByIdentifier }

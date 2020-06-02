@@ -4,182 +4,182 @@ const cars = [{
   model: 320,
   year: 1976,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 2,
   manufacturer: 82,
   model: 1005,
   year: 1973,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 3,
   manufacturer: 77,
   model: 941,
   year: 1984,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 4,
   manufacturer: 102,
   model: 1035,
   year: 1985,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 5,
   manufacturer: 37,
   model: 374,
   year: 1981,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 6,
   manufacturer: 23,
   model: 237,
   year: 1980,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 7,
   manufacturer: 5,
   model: 24,
   year: 1973,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 8,
   manufacturer: 53,
   model: 470,
   year: 1986,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 9,
   manufacturer: 39,
   model: 392,
   year: 1989,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 10,
   manufacturer: 19,
   model: 227,
   year: 1991,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 11,
   manufacturer: 39,
   model: 391,
   year: 2003,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 12,
   manufacturer: 69,
   model: 530,
   year: 2013,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 13,
   manufacturer: 33,
   model: 309,
   year: 2008,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 14,
   manufacturer: 10,
   model: 35,
   year: '2005',
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 15,
   manufacturer: 93,
   model: 1012,
   year: 2005,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 16,
   manufacturer: 39,
   model: 401,
   year: 2009,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 17,
   manufacturer: 62,
   model: 517,
   year: 1996,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 18,
   manufacturer: 71,
   model: 697,
   year: '2003',
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 19,
   manufacturer: 111,
   model: 1073,
   year: 2011,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 20,
   manufacturer: 14,
   model: 106,
   year: 1996,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 21,
   manufacturer: 53,
   model: 480,
   year: 1985,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 22,
   manufacturer: 19,
   model: 220,
   year: 2007,
   currentVehicle: 'no',
-  repurchase: 'yes'
+  repurchase: 'yes',
 }, {
   id: 23,
   manufacturer: 77,
   model: 934,
   year: 2007,
   currentVehicle: 'yes',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 24,
   manufacturer: 75,
   model: 883,
   year: 2015,
   currentVehicle: 'yes',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 25,
   manufacturer: 75,
   model: 871,
   year: 1994,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }, {
   id: 26,
   manufacturer: 46,
   model: 460,
   year: 1984,
   currentVehicle: 'no',
-  repurchase: 'no'
+  repurchase: 'no',
 }]
 
 module.exports = cars

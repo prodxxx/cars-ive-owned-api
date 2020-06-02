@@ -1,6 +1,6 @@
-const models = require('../models')
+import models from '../models'
 
-const getAllMyCars = async (request, response) => {
+export const getAllMyCars = async (request, response) => {
   try {
     const myCars = await models.myCars.findAll({
       attributes: ['year', 'currentVehicle', 'repurchase'],
@@ -10,8 +10,8 @@ const getAllMyCars = async (request, response) => {
         include: [{
           model: models.manufacturers,
           attributes: ['id', 'name'],
-        }]
-      }]
+        }],
+      }],
     })
 
     return myCars ? response.send(myCars) : response.status(500)
@@ -20,7 +20,7 @@ const getAllMyCars = async (request, response) => {
   }
 }
 
-const getMyCarsToRepurchase = async (request, response) => {
+export const getMyCarsToRepurchase = async (request, response) => {
   try {
     const { identifier } = request.params
 
@@ -33,8 +33,8 @@ const getMyCarsToRepurchase = async (request, response) => {
         include: [{
           model: models.manufacturers,
           attributes: ['id', 'name'],
-        }]
-      }]
+        }],
+      }],
     })
 
     return foundMyCars
@@ -45,7 +45,7 @@ const getMyCarsToRepurchase = async (request, response) => {
   }
 }
 
-const getAllMyCarsByYear = async (request, response) => {
+export const getAllMyCarsByYear = async (request, response) => {
   try {
     const { identifier } = request.params
 
@@ -57,9 +57,9 @@ const getAllMyCarsByYear = async (request, response) => {
         attributes: ['id', 'name'],
         include: [{
           model: models.manufacturers,
-          attributes: ['id', 'name']
-        }]
-      }]
+          attributes: ['id', 'name'],
+        }],
+      }],
     })
 
     return foundMyCars
@@ -70,7 +70,7 @@ const getAllMyCarsByYear = async (request, response) => {
   }
 }
 
-const saveMyNewCar = async (request, response) => {
+export const saveMyNewCar = async (request, response) => {
   try {
     const { vehicleModelId, year, currentVehicle, repurchase } = request.body
 
@@ -86,5 +86,3 @@ const saveMyNewCar = async (request, response) => {
     return response.status(500).send('Unable to add new owned vehicle, please try again')
   }
 }
-
-module.exports = { getAllMyCars, getMyCarsToRepurchase, getAllMyCarsByYear, saveMyNewCar }

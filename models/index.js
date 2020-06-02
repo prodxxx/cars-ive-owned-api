@@ -1,14 +1,14 @@
-const Sequelize = require('sequelize')
-const allConfigs = require('../configs/sequelize')
-const manufacturersModel = require('./manufacturers')
-const vehicleModelsModel = require('./vehicleModels')
-const myCarsModel = require('./myCars')
-const myCars2VehiclesModel = require('./myCars2Vehicles')
+import Sequelize from 'sequelize'
+import allConfigs from '../configs/sequelize'
+import manufacturersModel from './manufacturers'
+import vehicleModelsModel from './vehicleModels'
+import myCarsModel from './myCars'
+import myCars2VehiclesModel from './myCars2Vehicles'
 
-const environment = process.env.NODE_ENV || 'development'
-const config = allConfigs[environment]
+export const environment = process.env.NODE_ENV || 'development'
+export const config = allConfigs[environment]
 
-const connection = new Sequelize(config.database, config.username, config.password, {
+export const connection = new Sequelize(config.database, config.username, config.password, {
   host: config.host, dialect: config.dialect,
 })
 
@@ -28,6 +28,5 @@ module.exports = {
   vehicleModels,
   myCars,
   myCars2Vehicles,
-  Op: Sequelize.Op
+  Op: Sequelize.Op,
 }
-

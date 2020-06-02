@@ -1,6 +1,6 @@
-const models = require('../models')
+import models from '../models'
 
-const getAllManufacturers = async (request, response) => {
+export const getAllManufacturers = async (request, response) => {
   try {
     const manufacturers = await models.manufacturers.findAll()
 
@@ -10,22 +10,17 @@ const getAllManufacturers = async (request, response) => {
   }
 }
 
-const getManufacturersByIdentifier = async (request, response) => {
+export const getManufacturersByIdentifier = async (request, response) => {
   try {
     const { identifier } = request.params
 
-    const foundManufacturer = await models.manufacturers.findOne({
+    const foundManufacturer = await models.manufacturers.findAll({
       attributes: ['id', 'name', 'createdAt', 'updatedAt'],
-      where: {
-        [models.Op.or]: [
-          { id: identifier },
-          { name: { [models.Op.like]: `%${identifier}%` } }
-        ],
-      },
+      where: { name: { [models.Op.like]: `%${identifier}%` } },
       include: [{
         model: models.vehicleModels,
-        attributes: ['id', 'name', 'createdAt', 'updatedAt']
-      }]
+        attributes: ['id', 'name', 'createdAt', 'updatedAt'],
+      }],
     })
 
     return foundManufacturer
@@ -35,5 +30,3 @@ const getManufacturersByIdentifier = async (request, response) => {
     return response.status(500).send('Unable to retrieve manufacturer, please try again')
   }
 }
-
-module.exports = { getAllManufacturers, getManufacturersByIdentifier }

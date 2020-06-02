@@ -1,10 +1,10 @@
 const sinon = require('sinon')
 const sinonChai = require('sinon-chai')
 const chai = require('chai')
-const models = require('../../models')
 const {
   after, afterEach, beforeEach, describe, it,
 } = require('mocha')
+const models = require('../../models')
 const { manufacturerList, singleManufacturer } = require('../mocks/cars')
 const { vehicleModelList, singleVehicle } = require('../mocks/cars')
 const { myCarsList, singleMyCar, postedMyCar } = require('../mocks/cars')
@@ -84,13 +84,13 @@ describe('Controllers - API', () => {
           where: {
             [models.Op.or]: [
               { id: 'bmw' },
-              { name: { [models.Op.like]: '%bmw%' } }
+              { name: { [models.Op.like]: '%bmw%' } },
             ],
           },
           include: [{
             model: models.vehicleModels,
-            attributes: ['id', 'name', 'createdAt', 'updatedAt']
-          }]
+            attributes: ['id', 'name', 'createdAt', 'updatedAt'],
+          }],
         })
         expect(response.send).to.have.been.calledWith(singleManufacturer)
       })
@@ -107,13 +107,13 @@ describe('Controllers - API', () => {
           where: {
             [models.Op.or]: [
               { id: 'bmw' },
-              { name: { [models.Op.like]: '%bmw%' } }
+              { name: { [models.Op.like]: '%bmw%' } },
             ],
           },
           include: [{
             model: models.vehicleModels,
-            attributes: ['id', 'name', 'createdAt', 'updatedAt']
-          }]
+            attributes: ['id', 'name', 'createdAt', 'updatedAt'],
+          }],
         })
         expect(response.sendStatus).to.have.been.calledWith(404)
       })
@@ -130,13 +130,13 @@ describe('Controllers - API', () => {
           where: {
             [models.Op.or]: [
               { id: 'bmw' },
-              { name: { [models.Op.like]: '%bmw%' } }
+              { name: { [models.Op.like]: '%bmw%' } },
             ],
           },
           include: [{
             model: models.vehicleModels,
-            attributes: ['id', 'name', 'createdAt', 'updatedAt']
-          }]
+            attributes: ['id', 'name', 'createdAt', 'updatedAt'],
+          }],
         })
         expect(response.status).to.have.been.calledWith(500)
         expect(stubbedStatusSend).to.have.been.calledWith('Unable to retrieve manufacturer, please try again')
@@ -174,8 +174,8 @@ describe('Controllers - API', () => {
           where: { name: { [models.Op.like]: '%1996%' } },
           include: [{
             model: models.manufacturers,
-            attributes: ['id', 'name']
-          }]
+            attributes: ['id', 'name'],
+          }],
         })
         expect(response.send).to.have.been.calledWith(singleVehicle)
       })
@@ -192,8 +192,8 @@ describe('Controllers - API', () => {
           where: { name: { [models.Op.like]: '%1996%' } },
           include: [{
             model: models.manufacturers,
-            attributes: ['id', 'name']
-          }]
+            attributes: ['id', 'name'],
+          }],
         })
         expect(response.sendStatus).to.have.been.calledWith(404)
       })
@@ -210,8 +210,8 @@ describe('Controllers - API', () => {
           where: { name: { [models.Op.like]: '%1996%' } },
           include: [{
             model: models.manufacturers,
-            attributes: ['id', 'name']
-          }]
+            attributes: ['id', 'name'],
+          }],
         })
         expect(response.status).to.have.been.calledWith(500)
         expect(stubbedStatusSend).to.have.been.calledWith('Unable to retrieve vehicle model, please try again')
@@ -253,8 +253,8 @@ describe('Controllers - API', () => {
             include: [{
               model: models.manufacturers,
               attributes: ['id', 'name'],
-            }]
-          }]
+            }],
+          }],
         })
         expect(response.send).to.have.been.calledWith(singleMyCar)
       })
@@ -275,13 +275,13 @@ describe('Controllers - API', () => {
             include: [{
               model: models.manufacturers,
               attributes: ['id', 'name'],
-            }]
-          }]
+            }],
+          }],
         })
         expect(response.sendStatus).to.have.been.calledWith(404)
       })
 
-      it('returns a 500 error when the database calls fails', async () => {
+      it.only('returns a 500 error when the database calls fails', async () => {
         stubbedMyCarsFindAll.throws('ERROR!')
 
         const request = { params: { identifier: 1996 } }
@@ -296,9 +296,9 @@ describe('Controllers - API', () => {
             attributes: ['id', 'name'],
             include: [{
               model: models.manufacturers,
-              attributes: ['id', 'name']
-            }]
-          }]
+              attributes: ['id', 'name'],
+            }],
+          }],
         })
         expect(response.status).to.have.been.calledWith(500)
         expect(stubbedStatusSend).to.have.been.calledWith('Unable to retrieve owned vehicles, please try again')
@@ -313,7 +313,7 @@ describe('Controllers - API', () => {
         await saveMyNewCar(request, response)
 
         expect(stubbedSaveMyNewCar).to.have.been.calledWith({
-          vehicleId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes'
+          vehicleId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes',
         })
         expect(response.status).to.have.been.calledWith(201)
         expect(stubbedStatusSend).to.have.been.calledWith(postedMyCar)
@@ -338,7 +338,7 @@ describe('Controllers - API', () => {
         await saveMyNewCar(request, response)
 
         expect(stubbedSaveMyNewCar).to.have.been.calledWith({
-          vehicleModelId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes'
+          vehicleModelId: 13, year: 2019, currentVehicle: 'yes', repurchase: 'yes',
         })
         expect(response.status).to.have.been.calledWith(500)
         expect(stubbedStatusSend).to.have.been.calledWith('Unable to add new owned vehicle, please try again')
@@ -346,4 +346,3 @@ describe('Controllers - API', () => {
     })
   })
 })
-
